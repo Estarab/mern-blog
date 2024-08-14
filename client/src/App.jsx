@@ -9,7 +9,8 @@ import Blog from '../pages/Blog';
 import Donate from '../pages/Donate';
 import GetInvolved from '../pages/GetInvolved';
 import StakeHolders from '../pages/StakeHolders';
-// import Header from './components/Header';
+ import Header from './components/Header';
+import ContactUs from '../pages/ContactUs';
 // import Footer from './components/Footer';
 // import PrivateRoute from './components/PrivateRoute';
 // import OnlyAdminPrivateRoute from './components/OnlyAdminPrivateRoute';
@@ -22,13 +23,15 @@ import StakeHolders from '../pages/StakeHolders';
 export default function App() {
    return (
      <BrowserRouter>
-{/*       <ScrollToTop />
-      <Header /> */}
+      {/* <ScrollToTop /> */}
+      <Header />
       <Routes>
        <Route path='/' element={<Home/>} />
         <Route path='/about' element={<About />} />
         <Route path='/sign-in' element={<SignIn />} />
         <Route path='/sign-up' element={<SignUp />} />
+        <Route path='/contact-us' element={<ContactUs />} />
+
         {/* <Route path='/search' element={<Search />} /> */}
 {/*         <Route element={<PrivateRoute />}> */}
          <Route path='/dashboard' element={<Dashboard />} />
