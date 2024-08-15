@@ -11,7 +11,7 @@ import GetInvolved from './pages/GetInvolved';
 import StakeHolders from './pages/StakeHolders';
  import Header from './components/Header';
 import ContactUs from './pages/ContactUs';
-// import Footer from './components/Footer';
+ import Footer from './components/Footer';
 // import PrivateRoute from './components/PrivateRoute';
 // import OnlyAdminPrivateRoute from './components/OnlyAdminPrivateRoute';
 // import CreatePost from './pages/CreatePost';
@@ -49,7 +49,7 @@ export default function App() {
 
 {/*        <Route path='/post/:postSlug' element={<PostPage />} /> */}
        </Routes>
-{/*        <Footer /> */}
+       <Footer />
      </BrowserRouter>
   )
  }
