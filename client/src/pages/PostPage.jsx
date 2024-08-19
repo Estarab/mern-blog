@@ -62,14 +62,14 @@ export default function PostPage() {
       <h1 className='text-3xl mt-10 p-3 text-center font-serif max-w-2xl mx-auto lg:text-4xl'>
         {post && post.title}
       </h1>
-      {/* <Link
+      <Link
         to={`/search?category=${post && post.category}`}
         className='self-center mt-5'
       >
         <Button color='gray' pill size='xs'>
           {post && post.category}
         </Button>
-      </Link> */}
+      </Link>
       <img
         src={post && post.image}
         alt={post && post.title}

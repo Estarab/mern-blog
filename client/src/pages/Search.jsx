@@ -125,7 +125,7 @@ export default function Search() {
           </div>
           <div className='flex items-center gap-2'>
             <label className='font-semibold'>Category:</label>
-            <Select
+            {/* <Select
               onChange={handleChange}
               value={sidebarData.category}
               id='category'
@@ -134,7 +134,7 @@ export default function Search() {
               <option value='reactjs'>React.js</option>
               <option value='nextjs'>Next.js</option>
               <option value='javascript'>JavaScript</option>
-            </Select>
+            </Select> */}
           </div>
           <Button type='submit' outline gradientDuoTone='purpleToPink'>
             Apply Filters
