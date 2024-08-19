@@ -12,18 +12,18 @@ import StakeHolders from './pages/StakeHolders';
  import Header from './components/Header';
 import ContactUs from './pages/ContactUs';
  import Footer from './components/Footer';
-// import PrivateRoute from './components/PrivateRoute';
-// import OnlyAdminPrivateRoute from './components/OnlyAdminPrivateRoute';
-// import CreatePost from './pages/CreatePost';
-// import UpdatePost from './pages/UpdatePost';
-// import PostPage from './pages/PostPage';
-// import ScrollToTop from './components/ScrollToTop';
-// import Search from './pages/Search';
+ import PrivateRoute from './components/PrivateRoute';
+ import OnlyAdminPrivateRoute from './components/OnlyAdminPrivateRoute';
+ import CreatePost from './pages/CreatePost';
+ import UpdatePost from './pages/UpdatePost';
+ import PostPage from './pages/PostPage';
+ import ScrollToTop from './components/ScrollToTop';
+ import Search from './pages/Search';
 
 export default function App() {
    return (
      <BrowserRouter>
-      {/* <ScrollToTop /> */}
+      <ScrollToTop />
       <Header />
       <Routes>
        <Route path='/' element={<Home/>} />
@@ -32,14 +32,14 @@ export default function App() {
         <Route path='/sign-up' element={<SignUp />} />
         <Route path='/contact-us' element={<ContactUs />} />
 
-        {/* <Route path='/search' element={<Search />} /> */}
-{/*         <Route element={<PrivateRoute />}> */}
+        <Route path='/search' element={<Search />} />
+         <Route element={<PrivateRoute />}> 
          <Route path='/dashboard' element={<Dashboard />} />
-        {/* </Route>
+         </Route>
          <Route element={<OnlyAdminPrivateRoute />}>
            <Route path='/create-post' element={<CreatePost />} />
           <Route path='/update-post/:postId' element={<UpdatePost />} />
-        </Route> */}
+        </Route> 
 
         <Route path='/programs' element={<Programs />} />
         <Route path='/blog' element={<Blog />} />
@@ -47,7 +47,7 @@ export default function App() {
         <Route path='/get-involved' element={<GetInvolved />} />
         <Route path='/stake-holders' element={<StakeHolders />} />
 
-{/*        <Route path='/post/:postSlug' element={<PostPage />} /> */}
+       <Route path='/post/:postSlug' element={<PostPage />} />
        </Routes>
        <Footer />
      </BrowserRouter>
