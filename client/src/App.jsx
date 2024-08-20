@@ -7,7 +7,7 @@
 import Programs from './pages/Programs';
 import Blog from './pages/Blog';
 import Donate from './pages/Donate';
-//import GetInvolved from './pages/GetInvolved';
+import GetInvolved from './pages/GetInvolved';
 import StakeHolders from './pages/StakeHolders';
  import Header from './components/Header';
 import ContactUs from './pages/ContactUs';
@@ -46,10 +46,10 @@ export default function App() {
           <Route path='/update-post/:postId' element={<UpdatePost />} />
         </Route> 
 
-        <Route path='/programs' element={<Programs />} />
-        <Route path='/blog' element={<Blog />} />
+        <Route path='/search' element={<Programs />} />
+        <Route path='/post/:postSlug' element={<Blog />} />
         <Route path='/donate' element={<Donate />} />
-        {/* <Route path='/get-involved' element={<GetInvolved />} /> */}
+        <Route path='/get-involved' element={<GetInvolved />} />
         <Route path='/stake-holders' element={<StakeHolders />} />
 
        <Route path='/post/:postSlug' element={<PostPage />} />

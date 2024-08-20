@@ -54,7 +54,7 @@ export default function Header() {
         to='/'
         className='self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white'
       >
-        <span className='px-2 py-1 bg-gradient-to-r from-teal-500 via-teal-500 to-pink-500 rounded-lg text-white'>We Are The World Zambia</span>
+        <span className='px-2 py-1 bg-gradient-to-r from-teal-500 via-teal-500 to-pink-500 rounded-lg text-white'>World Zambia</span>
         
       </Link>
       <form onSubmit={handleSubmit}>
@@ -116,16 +116,16 @@ export default function Header() {
            <Link to='/about'>About</Link>
          </Navbar.Link>
          <Navbar.Link active={path === '/programs'} as={'div'}>
-           <Link to='/programs'>Programs</Link>
+           <Link to='/search'>Programs</Link>
          </Navbar.Link>
          <Navbar.Link active={path === '/get-involved'} as={'div'}>
            <Link to='/get-involved'>Get Involved</Link>
          </Navbar.Link>
-         <Navbar.Link active={path === '/stack-holders'} as={'div'}>
-           <Link to='/stackholders'>StakeHolders</Link>
+         <Navbar.Link active={path === '/stake-holders'} as={'div'}>
+           <Link to='/stake-holders'>StakeHolders</Link>
          </Navbar.Link>
          <Navbar.Link active={path === '/blog'} as={'div'}>
-           <Link to='/blog'>Blog</Link>
+           <Link to='/search'>Blog</Link>
          </Navbar.Link>
          <Navbar.Link active={path === '/contact-us'} as={'div'}>
            <Link to='/contact-us'>Contact Us</Link>
