@@ -3,6 +3,12 @@ import CallToAction from '../components/CallToAction';
 import { useEffect, useState } from 'react';
 import PostCard from '../components/PostCard';
 import BannerProduct from '../components/BannerProduct';
+import OurPartners from '../components/OurPartners';
+import AboutSection from '../components/AboutSection';
+import BigDonateButton from '../components/BigDonateButton';
+//import GetInvolved from '../components/GetInvolvedComp';
+import GetInvolvedComp from '../components/GetInvolvedComp';
+
 
 export default function Home() {
   const [posts, setPosts] = useState([]);
@@ -19,29 +25,38 @@ export default function Home() {
     <div>
       <div className='relative z-40'>
       <BannerProduct/>
+      <div className='bg-gray-100'>
+      <BigDonateButton/>
       </div>
-   
+      
+      </div>
       
       
-      <div className='flex flex-col gap-6 p-20 px-3 max-w-8xl mx-auto '>
+      
+      <div className='flex flex-col gap-6 bg-gradient-to-r from-gray-100 to-gray-300  p-20 px-3 max-w-8xl mx-auto '>
      
-        <h1 className='text-3xl font-bold lg:text-6xl text-center'>We Are The World Zambia</h1>
+        <h1 className='text-3xl font-bold lg:text-4xl text-center'>We Are The World Zambia</h1>
         
-        <p className='text-gray-500 text-xs sm:text-sm'>
-        We Are The World Zambia We Are The World Zambia We Are The World Zambia
-        We Are The World ZambiaWe Are The World ZambiaW e Are The World Zambia
+        <p className='text-gray-500 text-xs sm:text-sm text-center'>
+        Empowering Communities, Changing Lives
         </p>
         <Link
           to='/search'
-          className='text-xs sm:text-sm text-teal-500 font-bold hover:underline'
+          className='text-xs sm:text-sm text-purple-500 font-bold hover:underline text-center'
         >
-          View all posts
+          VIEW OUR POSTS
         </Link>
       </div>
+      <AboutSection />
+      <GetInvolvedComp/>
+       <OurPartners />
       
+
+
       {/* <div className='p-3 bg-amber-100 dark:bg-slate-700'>
         <CallToAction />
       </div> */}
+
 
       <div className='max-w-6xl mx-auto p-3 flex flex-col gap-8 py-7'>
         {posts && posts.length > 0 && (

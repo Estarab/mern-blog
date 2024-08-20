@@ -7,7 +7,7 @@
 import Programs from './pages/Programs';
 import Blog from './pages/Blog';
 import Donate from './pages/Donate';
-import GetInvolved from './pages/GetInvolved';
+//import GetInvolved from './pages/GetInvolved';
 import StakeHolders from './pages/StakeHolders';
  import Header from './components/Header';
 import ContactUs from './pages/ContactUs';
@@ -19,12 +19,17 @@ import ContactUs from './pages/ContactUs';
  import PostPage from './pages/PostPage';
  import ScrollToTop from './components/ScrollToTop';
  import Search from './pages/Search';
+ //import '@fortawesome/fontawesome-free/css/all.min.css';
+
+//import OurPartners from './components/OurPartners';
+
 
 export default function App() {
    return (
      <BrowserRouter>
       <ScrollToTop />
       <Header />
+      
       <Routes>
        <Route path='/' element={<Home/>} />
         <Route path='/about' element={<About />} />
@@ -44,11 +49,13 @@ export default function App() {
         <Route path='/programs' element={<Programs />} />
         <Route path='/blog' element={<Blog />} />
         <Route path='/donate' element={<Donate />} />
-        <Route path='/get-involved' element={<GetInvolved />} />
+        {/* <Route path='/get-involved' element={<GetInvolved />} /> */}
         <Route path='/stake-holders' element={<StakeHolders />} />
 
        <Route path='/post/:postSlug' element={<PostPage />} />
+       
        </Routes>
+       
        <Footer />
      </BrowserRouter>
   )
