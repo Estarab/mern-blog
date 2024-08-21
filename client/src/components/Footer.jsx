@@ -1,7 +1,9 @@
 import React from 'react';
 import { BsFacebook, BsInstagram, BsTwitter } from 'react-icons/bs';
 //import { Footer } from 'flowbite-react';
-// import { Link } from 'react-router-dom';
+ import { Link } from 'react-router-dom';
+ import { Button } from 'flowbite-react';
+
 
 
 const Footer = () => {
@@ -21,13 +23,13 @@ const Footer = () => {
               placeholder="Enter your email"
               className="w-full sm:w-auto flex-grow p-3 rounded-md text-gray-800 mb-4 sm:mb-0 sm:mr-4"
             />
-            <button
-            
-              type="submit"
-              className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:bg-blue-500  text-white font-semibold py-3 px-6 rounded-md transition duration-300"
-            >
-              Subscribe
-            </button>
+           <Link to='/sign-in'>
+          <Button
+            className='ml-4 px-4 py-2 text-white font-semibold rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l transition duration-300 ease-in-out transform hover:scale-110'
+          >
+            Subscribe
+          </Button>
+        </Link>
           </form>
         </div>
 
@@ -64,32 +66,32 @@ const Footer = () => {
           <h2 className="text-2xl font-bold mb-4">Quick Links</h2>
           <ul>
             <li className="mb-2">
-              <a href="#" className="hover:text-blue-400 transition duration-300">Home</a>
+              <a href="/" className="hover:text-blue-400 transition duration-300">Home</a>
             </li>
             <li className="mb-2">
-              <a href="#" className="hover:text-blue-400 transition duration-300">About</a>
+              <a href="about" className="hover:text-blue-400 transition duration-300">About</a>
             </li>
             <li className="mb-2">
-              <a href="#" className="hover:text-blue-400 transition duration-300">Programs</a>
+              <a href="/search" className="hover:text-blue-400 transition duration-300">Programs</a>
             </li>
             <li className="mb-2">
-              <a href="#" className="hover:text-blue-400 transition duration-300">Blog</a>
+              <a href="/search" className="hover:text-blue-400 transition duration-300">Blog</a>
             </li>
             <li className="mb-2">
-              <a href="#" className="hover:text-blue-400 transition duration-300">StakeHolders</a>
+              <a href="stake-holders" className="hover:text-blue-400 transition duration-300">StakeHolders</a>
             </li>
             <li className="mb-2">
-              <a href="#" className="hover:text-blue-400 transition duration-300">Get Involved</a>
+              <a href="/get-involved" className="hover:text-blue-400 transition duration-300">Get Involved</a>
             </li>
             <li className="mb-2">
               
-            <button
-            
-            type="submit"
-            className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:bg-blue-500  text-white font-semibold py-3 px-6 rounded-md transition duration-300"
+            <Link to='/donate'>
+          <Button
+            className='ml-4 px-4 py-2 text-white font-semibold rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l transition duration-300 ease-in-out transform hover:scale-110'
           >
-            DONATE
-          </button>
+            Donate
+          </Button>
+        </Link>
             </li>
           </ul>
         </div>
