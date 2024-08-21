@@ -46,8 +46,8 @@ export default function App() {
           <Route path='/update-post/:postId' element={<UpdatePost />} />
         </Route> 
 
-        <Route path='/search' element={<Programs />} />
-        <Route path='/post/:postSlug' element={<Blog />} />
+        <Route path='/programs' element={<Programs />} />
+        <Route path='/blog' element={<Blog />} />
         <Route path='/donate' element={<Donate />} />
         <Route path='/get-involved' element={<GetInvolved />} />
         <Route path='/stake-holders' element={<StakeHolders />} />
