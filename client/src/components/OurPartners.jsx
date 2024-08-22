@@ -1,6 +1,6 @@
-import image1 from '../assets/stakeholders/partner1.jpg'
-import image2 from '../assets/stakeholders/partner2.jpg'
-import image3 from '../assets/stakeholders/partner3.jpg'
+import image1 from '../assets/stakeholders/sk.jpeg'
+import image2 from '../assets/stakeholders/stakeholder.jpeg'
+import image3 from '../assets/stakeholders/stakeholder1.jpeg'
 
 
 const OurPartners = () => {
@@ -17,7 +17,7 @@ const OurPartners = () => {
                             
                             className="mx-auto h-40 w-40 rounded-full object-cover"
                         />
-                        <h3 className="mt-4 text-lg font-medium text-gray-700">Mr Jones</h3>
+                        <h3 className="mt-4 text-lg font-medium text-gray-700">Abraham Israel</h3>
                     </div>
                 
                     <div className="text-center">
@@ -28,7 +28,7 @@ const OurPartners = () => {
                             
                             className="mx-auto h-40 w-40 rounded-full object-cover"
                         />
-                        <h3 className="mt-4 text-lg font-medium text-gray-700">Mr Alex</h3>
+                        <h3 className="mt-4 text-lg font-medium text-gray-700">Harriet Nakapizye</h3>
                     </div>
                 
                     <div className="text-center">
@@ -39,7 +39,7 @@ const OurPartners = () => {
                             
                             className="mx-auto h-40 w-40 rounded-full object-cover"
                         />
-                        <h3 className="mt-4 text-lg font-medium text-gray-700">Mercy</h3>
+                        <h3 className="mt-4 text-lg font-medium text-gray-700">Monde Rita Nguni</h3>
                     </div>
                 
             </div>

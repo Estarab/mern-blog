@@ -151,6 +151,8 @@ import UpdatePost from './pages/UpdatePost';
 import PostPage from './pages/PostPage';
 import ScrollToTop from './components/ScrollToTop';
 import Search from './pages/Search';
+import ProgramsPage from './pages/ProgramsPage';
+import ProgramCard from './components/ProgramCard';
 
 export default function App() {
   return (
@@ -175,12 +177,12 @@ export default function App() {
           <Route path='/update-post/:postId' element={<UpdatePost />} />
         </Route> 
 
-        <Route path='/programs' element={<Programs />} />
+        <Route path='/programs' element={<ProgramsPage />} />
         <Route path='/blog' element={<Blog />} />
         <Route path='/donate' element={<Donate />} />
         <Route path='/get-involved' element={<GetInvolved />} />
         <Route path='/stake-holders' element={<StakeHolders />} />
-
+        <Route path = '/programs' element={<ProgramCard/>} />
         <Route path='/post/:postSlug' element={<PostPage />} />
       </Routes>
       
