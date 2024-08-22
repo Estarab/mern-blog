@@ -72,23 +72,23 @@ export default function Header() {
       </form>
 
       <div className='flex items-center gap-4'>
-        <Button
+        {/* <Button
           className='w-12 h-10 hidden sm:flex items-center justify-center'
           color='gray'
           pill
           onClick={() => dispatch(toggleTheme())}
         >
           {theme === 'light' ? <FaSun /> : <FaMoon />}
-        </Button>
+        </Button> */}
 
-        <Button
+        {/* <Button
           className='w-12 h-10 sm:hidden flex items-center justify-center'
           color='gray'
           pill
           onClick={() => dispatch(toggleTheme())}
         >
           {theme === 'light' ? <FaSun /> : <FaMoon />}
-        </Button>
+        </Button> */}
 
         {currentUser ? (
           <Dropdown
@@ -153,7 +153,7 @@ export default function Header() {
         </Navbar.Link>
 
         <Dropdown
-          label='More'
+          label='View More Pages '
           inline
           className='bg-gray-50 hover:bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-900 dark:text-white rounded-lg transition-all duration-200 ease-in-out z-50'
         >
@@ -173,7 +173,7 @@ export default function Header() {
 
         <Link to='/donate'>
           <Button
-            className='ml-4 px-4 py-2 text-white font-semibold rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l transition duration-300 ease-in-out transform hover:scale-110'
+            className=' mt-4 ml-4 px-4 py-2 text-white font-semibold rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l transition duration-300 ease-in-out transform hover:scale-110'
           >
             Donate
           </Button>
