@@ -1,12 +1,12 @@
 import React from 'react';
 
 // Import images from the assets folder
-import Program1Image from '../assets/banner/banne1-mobile.jpg';
-import Program2Image from '../assets/banner/banner2.jpg';
-import Program3Image from '../assets/banner/banner3.jpg';
-import Program4Image from '../assets/banner/banner3.jpg';
-import Program5Image from '../assets/banner/banner3.jpg';
-import Program6Image from '../assets/banner/banner3.jpg';
+import Program1Image from '../assets/programs/program1-removebg-preview.png';
+import Program2Image from '../assets/programs/8ed65093-24cd-4dd0-96a7-667db0b72d6e.jpg';
+import Program3Image from '../assets/about image/obj.jpeg';
+import Program4Image from '../assets/programs/job.jpg';
+import Program5Image from '../assets/about image/mission.jpeg';
+import Program6Image from '../assets/programs/support.jpg';
 
 const programs = [
   {

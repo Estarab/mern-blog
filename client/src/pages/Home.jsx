@@ -9,6 +9,7 @@ import BigDonateButton from '../components/BigDonateButton';
 //import GetInvolved from '../components/GetInvolvedComp';
 import GetInvolvedComp from '../components/GetInvolvedComp';
 import MeetOurTeam from '../components/MeetOurTeam';
+import ProgramsPage from '../components/ProgramCard';
 
 
 export default function Home() {
@@ -50,6 +51,7 @@ export default function Home() {
       </div>
       <AboutSection />
       <GetInvolvedComp/>
+      <ProgramsPage/>
       <MeetOurTeam/>
        
       
