@@ -6,12 +6,12 @@ import aboutimg3 from '../assets/about image/obj.jpeg';
 const AboutSection = () => {
   return (
     <section className="bg-gray-100 py-16 px-8">
-      <div className="container mx-auto space-y-12">
+      <div className="container mx-auto space-y-12 ">
         
         {/* First Section */}
         <div className="flex flex-col md:flex-row items-center md:space-x-12 space-y-12 md:space-y-0">
           {/* Image Section */}
-          <div className="w-full md:w-1/2">
+          <div className="w-full md:w-1/2 lg:hidden">
             <img 
               src={aboutimg1} 
               alt="Our Mission" 
@@ -19,7 +19,7 @@ const AboutSection = () => {
             />
           </div>
           {/* Text Section */}
-          <div className="w-full md:w-1/2 text-center md:text-left">
+          <div className="w-full md:w-1/2 text-center md:text-left ">
             <h2 className="text-4xl font-bold text-gray-800 mb-4 fade-in-up">
               Our Vision
             </h2>
@@ -30,9 +30,9 @@ const AboutSection = () => {
         </div>
 
         {/* Second Section with Image on the Right */}
-        <div className="flex flex-col md:flex-row-reverse items-center md:space-x-12 space-y-12 md:space-y-0">
+        <div className="flex flex-col md:flex-row-reverse items-center md:space-x-12 space-y-12 md:space-y-0 lg:hidden">
           {/* Image Section */}
-          <div className="w-full md:w-1/2">
+          <div className="w-full md:w-1/2 lg:hidden">
             <img 
               src={aboutimg2} 
               alt="Our Vision" 
@@ -53,7 +53,7 @@ const AboutSection = () => {
         {/* Third Section */}
         <div className="flex flex-col md:flex-row items-center md:space-x-12 space-y-12 md:space-y-0">
           {/* Image Section */}
-          <div className="w-full md:w-1/2">
+          <div className="w-full md:w-1/2 lg:hidden">
             <img 
               src={aboutimg3} 
               alt="Our Objectives" 

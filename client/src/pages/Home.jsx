@@ -78,7 +78,7 @@ export default function Home() {
             >
               View all posts
             </Link>
-            <OurPartners />
+            {/* <OurPartners /> */}
           </div>
         )}
       </div>
