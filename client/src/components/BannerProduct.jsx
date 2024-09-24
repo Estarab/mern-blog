@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react'
-import image1 from '../assets/banner/img4.jpg'
-import image2 from '../assets/banner/img1.jpg'
-import image3 from '../assets/banner/img4.jpg'
-import image4 from '../assets/banner/img4.jpg'
-import image5 from '../assets/banner/img1.jpg'
+import image1 from '../assets/banner/slide1.jpeg'
+import image2 from '../assets/banner/slide2.jpeg'
+import image3 from '../assets/banner/slide3.jpeg'
+import image4 from '../assets/banner/slide4.jpeg'
+import image5 from '../assets/banner/slide5.jpg'
 
 
-import image1Mobile from '../assets/banner/img4_mobile.jpg'
-import image2Mobile from '../assets/banner/img1_mobile.jpg'
-import image3Mobile from '../assets/banner/img4_mobile.jpg'
-import image4Mobile from '../assets/banner/img1_mobile.jpg'
-import image5Mobile from '../assets/banner/img4_mobile.jpg'
+ import image1Mobile from '../assets/banner/slide1_mobile.jpeg'
+ import image2Mobile from '../assets/banner/slide2_mobile.jpeg'
+ import image3Mobile from '../assets/banner/slide3_mobile.jpeg'
+ import image4Mobile from '../assets/banner/slide4_mobile.jpeg'
+ import image5Mobile from '../assets/banner/slide5_mobile.jpg'
 
 import { FaAngleRight } from "react-icons/fa6";
 import { FaAngleLeft } from "react-icons/fa6";
@@ -23,16 +23,16 @@ const BannerProduct = () => {
         image1,
         image2,
         image3,
-        image4,
+       image4,
         image5
     ]
 
     const mobileImages = [
-        image1Mobile,
-        image2Mobile,
-        image3Mobile,
-        image4Mobile,
-        image5Mobile
+         image1Mobile,
+         image2Mobile,
+         image3Mobile,
+         image4Mobile,
+         image5Mobile
     ]
 
     const nextImage = () =>{

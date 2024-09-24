@@ -6,13 +6,16 @@ import image3 from '../assets/stakeholders/stakeholder1.jpeg';
 import ab2 from '../assets/stakeholder photos/ab/ab nation tech.png'
 import ab3 from '../assets/stakeholder photos/ab/MOBILE APP DEVELOPMENT.png'
 import ab4 from '../assets/stakeholder photos/ab/digital m.png'
+import betty1 from '../assets/stakeholders/Betty.jpeg'
+import pstfaithsarah1 from '../assets/stakeholders/pst faithsarah.jpg'
+import sh2 from '../assets/stakeholders/sh2.jpg'
 
 const stakeholders = [
     {
         name: 'Abraham Israel',
         image: image1,
         profession: 'Software Engineer',
-        blog: ' WHAT I DO.',
+        blog: ' Abraham Israel is a Software Engineer who Specializes in Web Development and Mobile App Development',
         works: [
             {
                 title: 'Building Responsive Websites',
@@ -29,57 +32,117 @@ const stakeholders = [
                 content: 'Our Digital marketing services encompasses a wide range of strategies aimed at promoting products or services through online channels. These services include search engine optimization (SEO) to enhance website visibility, pay-per-click (PPC) advertising for targeted traffic, and social media marketing to engage audiences on platforms like Facebook, Instagram, and Twitter.',
                 image: ab4,
             },
-            {
-                title: 'Understanding React Hooks',
-                content: 'React Hooks have transformed how we manage state...',
-                image: 'path/to/image2.jpg',
-            },
+            
         ],
     },
     {
         name: 'Harriet Nakapizye',
         image: image2,
         profession: 'Project Manager',
-        blog: 'Harriet shares insights on project management strategies and tips.',
+        blog: 'Projects and Works.',
         works: [
-            {
-                title: 'Agile Project Management Best Practices',
-                content: '',
-                image: 'path/to/image3.jpg',
-            },
-            {
-                title: 'How to Lead a Successful Team',
-                content: 'Leadership is crucial in project success. Here are my top tips...',
-                image: 'path/to/image4.jpg',
-            },
+            // {
+            //     title: 'Project Manager',
+            //     content: ' what she does comes here',
+            //     image: 'path/to/image3.jpg',
+            // },
+            
         ],
     },
     {
         name: 'Monde Rita Nguni',
         image: image3,
         profession: 'Designer',
-        blog: '.',
+        blog: 'Here is what Monde Rita Nguni does, Projects and Works',
         works: [
-            {
-                title: 'Creating User-Centric Designs',
-                content: '',
-                image: 'path/to/image5.jpg',
-            },
-            {
-                title: 'The Importance of Usability Testing',
-                content: '',
-                image: 'path/to/image6.jpg',
-            },
-            {
-                title: 'The Importance of Usability Testing',
-                content: '',
-                image: 'path/to/image6.jpg',
-            },
-            {
-                title: 'The Importance of Usability Testing',
-                content: 'Testing is essential for user satisfaction. Here’s why...Testing is essential for user satisfaction. Here’s whyTesting is essential for user satisfaction. Here’s whyTesting is essential for user satisfaction. Here’s whyTesting is essential for user satisfaction. Here’s whyTesting is essential for user satisfaction. Here’s whyTesting is essential for user satisfaction. Here’s whyvTesting is essential for user satisfaction. Here’s why',
-                image: 'path/to/image6.jpg',
-            },
+            // {
+            //     title: 'Designing',
+            //     content: ' what she does comes here',
+            //     image: 'path/to/image5.jpg',
+            // },
+            
+           
+            
+        ],
+    },
+    {
+        name: 'Bertha Mukubesa',
+        //image: image3,
+        profession: 'Stakeholder',
+        blog: 'Projects and Works',
+        works: [
+            // {
+            //     title: 'Stakeholder',
+            //     content: ' what she does comes here',
+            //     image: 'path/to/image5.jpg',
+            // },
+            
+           
+            
+        ],
+    },
+    {
+        name: 'Betty Simalonda',
+        image: betty1,
+        profession: 'Stakeholder',
+        blog: 'Here is what Betty Simalonda does, Projects and Works',
+        works: [
+            // {
+            //     title: 'Stakeholder',
+            //     content: ' what she does comes here',
+            //     image: 'path/to/image5.jpg',
+            // },
+            
+           
+            
+        ],
+    },
+    {
+        name: 'Pastor Faithsarah Melvin Lungu',
+        image: pstfaithsarah1,
+        profession: 'Stakeholder',
+        blog: 'Projects and Works',
+        works: [
+            // {
+            //     title: 'Stakeholder',
+            //     content: ' what she does comes here',
+            //     image: 'path/to/image5.jpg',
+            // },
+            
+           
+            
+        ],
+    },
+    {
+        name: 'Stakeholder',
+        image: sh2,
+        profession: 'Stakeholder',
+        blog: ' Projects and Works',
+        works: [
+            // {
+            //     title: 'Stakeholder',
+            //     content: ' works come here',
+            //     image: 'path/to/image5.jpg',
+            // },
+            
+           
+            
+        ],
+    },
+    {
+        name: 'Carlos Pinto',
+        //image: image3,
+        profession: 'Stakeholder',
+        blog: 'Projects and Works',
+        works: [
+            // {
+            //     title: 'Stakeholder',
+            //     content: ' what he does comes here',
+            //     image: 'path/to/image5.jpg',
+            // },
+            
+           
+            
         ],
     },
 ];

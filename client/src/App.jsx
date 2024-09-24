@@ -23,7 +23,8 @@ import ProgramsPage from './pages/ProgramsPage';
 import ProgramCard from './components/ProgramCard';
 import OurPartners from './components/OurPartners';
 import BlogSections from './components/BlogSections';
-import StakeholderPage from './pages/StakeholderPage'; // Import the new component
+import StakeholderPage from './pages/StakeholderPage'; 
+import TeamMemberPage from './pages/TeamMemberPage'; // Import the new component
 
 export default function App() {
   return (
@@ -56,10 +57,10 @@ export default function App() {
         <Route path='/programs' element={<ProgramCard />} />
         <Route path='/post/:postSlug' element={<PostPage />} />
         
-        {/* Add new routes for OurPartners and BlogSections */}
         <Route path='/partners' element={<OurPartners />} />
         <Route path='/blogs' element={<BlogSections />} />
-        <Route path='/stakeholder/:name' element={<StakeholderPage />} /> {/* New route for stakeholder blog pages */}
+        <Route path='/stakeholder/:name' element={<StakeholderPage />} />
+        <Route path='/team-member/:name' element={<TeamMemberPage />} /> {/* New route for team member blog pages */}
       </Routes>
       
       <Footer />

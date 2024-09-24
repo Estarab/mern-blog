@@ -14,14 +14,14 @@ const StakeholderPage = () => {
 
     return (
         <div className="py-12">
-            <div className="bg-white p-6 my-8 rounded-lg shadow-lg">
-                <h3 className="text-2xl font-bold mb-4">{stakeholder.name}</h3>
+            <div className="bg-white p-6 my-8 rounded-lg shadow-lg text-center">
+                <h3 className="text-3xl font-bold mb-4 animate__animated animate__fadeIn">{stakeholder.name}</h3>
                 <img
                     src={stakeholder.image}
                     alt={stakeholder.name}
                     className="mx-auto h-40 w-40 rounded-full object-cover mb-4"
                 />
-                <p className="text-gray-700 mb-6">{stakeholder.blog}</p>
+                <h3 className="text-gray-700 mb-6 text-xl animate__animated animate__fadeIn">{stakeholder.blog}</h3>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
