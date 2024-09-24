@@ -15,7 +15,7 @@ const stakeholders = [
         name: 'Abraham Israel',
         image: image1,
         profession: 'Software Engineer',
-        blog: ' Abraham Israel is a Software Engineer who Specializes in Web Development and Mobile App Development',
+        blog: 'WHAT I DO',
         works: [
             {
                 title: 'Building Responsive Websites',

@@ -21,10 +21,9 @@ const StakeholderPage = () => {
                     alt={stakeholder.name}
                     className="mx-auto h-40 w-40 rounded-full object-cover mb-4"
                 />
-                <h3 className="text-gray-700 mb-6 text-xl animate__animated animate__fadeIn">{stakeholder.blog}</h3>
-            </div>
+                <h3 className="text-gray-700 mb-6 font-bold text-xl animate__animated animate__fadeIn">{stakeholder.blog}</h3>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {stakeholder.works.map((work, index) => (
                     <div key={index} className="bg-white rounded-lg shadow-md transform transition-transform hover:scale-105">
                         <img src={work.image} alt={work.title} className="w-full h-48 object-cover rounded-t-lg" />
@@ -35,6 +34,9 @@ const StakeholderPage = () => {
                     </div>
                 ))}
             </div>
+            </div>
+
+           
         </div>
     );
 };
