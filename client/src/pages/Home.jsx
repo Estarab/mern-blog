@@ -43,15 +43,15 @@ export default function Home() {
         Empowering Communities, Changing Lives
         </p>
         <Link
-          to='/search'
+          to='/about'
           className='text-xs sm:text-sm text-purple-500 font-bold hover:underline text-center'
         >
-          VIEW OUR POSTS
+          CLICK HERE TO KNOW MORE ABOUT US
         </Link>
       </div>
       <AboutSection />
       <GetInvolvedComp/>
-      <ProgramsPage/>
+      {/* <ProgramsPage/> */}
       <MeetOurTeam/>
        
       
@@ -66,7 +66,7 @@ export default function Home() {
       <div className='max-w-6xl mx-auto p-3 flex flex-col gap-8 py-7'>
         {posts && posts.length > 0 && (
           <div className='flex flex-col gap-6'>
-            <h2 className='text-2xl font-semibold text-center'>Recent Posts</h2>
+            <h2 className='text-2xl font-semibold text-center'>stakeholders and what they do</h2>
             <div className='flex flex-wrap gap-4'>
               {posts.map((post) => (
                 <PostCard key={post._id} post={post} />

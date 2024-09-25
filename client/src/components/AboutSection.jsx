@@ -2,6 +2,7 @@ import React from 'react';
 import aboutimg1 from '../assets/about image/vision.jpeg'; // Assuming you have different images
 import aboutimg2 from '../assets/about image/mission.jpeg';
 import aboutimg3 from '../assets/about image/obj.jpeg';
+import ProgramsPage from '../pages/ProgramsPage';
 
 const AboutSection = () => {
   return (
@@ -72,6 +73,7 @@ const AboutSection = () => {
         </div>
 
       </div>
+      <ProgramsPage/>
     </section>
   );
 };

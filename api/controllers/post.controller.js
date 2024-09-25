@@ -2,23 +2,33 @@ import Post from '../models/post.model.js';
 import { errorHandler } from '../utils/error.js';
 
 export const create = async (req, res, next) => {
-  // Allow only super users to create a post
-  if (!req.user.isSuperUser) {
+  // Allow only admins to create a post
+  if (!req.user.isAdmin) {
     return next(errorHandler(403, 'You are not allowed to create a post'));
   }
+
+  // Check if the user already has a post
+  const existingPost = await Post.findOne({ userId: req.user.id });
+  if (existingPost) {
+    return next(errorHandler(400, 'You already have a post.'));
+  }
+
   if (!req.body.title || !req.body.content) {
     return next(errorHandler(400, 'Please provide all required fields'));
   }
+
   const slug = req.body.title
     .split(' ')
     .join('-')
     .toLowerCase()
     .replace(/[^a-zA-Z0-9-]/g, '');
+
   const newPost = new Post({
     ...req.body,
     slug,
     userId: req.user.id,
   });
+
   try {
     const savedPost = await newPost.save();
     res.status(201).json(savedPost);
@@ -32,6 +42,7 @@ export const getposts = async (req, res, next) => {
     const startIndex = parseInt(req.query.startIndex) || 0;
     const limit = parseInt(req.query.limit) || 9;
     const sortDirection = req.query.order === 'asc' ? 1 : -1;
+
     const posts = await Post.find({
       ...(req.query.userId && { userId: req.query.userId }),
       ...(req.query.category && { category: req.query.category }),
@@ -51,12 +62,7 @@ export const getposts = async (req, res, next) => {
     const totalPosts = await Post.countDocuments();
 
     const now = new Date();
-
-    const oneMonthAgo = new Date(
-      now.getFullYear(),
-      now.getMonth() - 1,
-      now.getDate()
-    );
+    const oneMonthAgo = new Date(now.getFullYear(), now.getMonth() - 1, now.getDate());
 
     const lastMonthPosts = await Post.countDocuments({
       createdAt: { $gte: oneMonthAgo },
@@ -73,8 +79,7 @@ export const getposts = async (req, res, next) => {
 };
 
 export const deletepost = async (req, res, next) => {
-  // Allow only super users to delete posts
-  if (!req.user.isSuperUser) {
+  if (!req.user.isAdmin || req.user.id !== req.params.userId) {
     return next(errorHandler(403, 'You are not allowed to delete this post'));
   }
   try {
@@ -86,8 +91,7 @@ export const deletepost = async (req, res, next) => {
 };
 
 export const updatepost = async (req, res, next) => {
-  // Allow only super users to update posts
-  if (!req.user.isSuperUser) {
+  if (!req.user.isAdmin || req.user.id !== req.params.userId) {
     return next(errorHandler(403, 'You are not allowed to update this post'));
   }
   try {
@@ -114,7 +118,8 @@ export const updatepost = async (req, res, next) => {
 // import { errorHandler } from '../utils/error.js';
 
 // export const create = async (req, res, next) => {
-//   if (!req.user.isAdmin) {
+//   // Allow only super users to create a post
+//   if (!req.user.isSuperUser) {
 //     return next(errorHandler(403, 'You are not allowed to create a post'));
 //   }
 //   if (!req.body.title || !req.body.content) {
@@ -184,7 +189,8 @@ export const updatepost = async (req, res, next) => {
 // };
 
 // export const deletepost = async (req, res, next) => {
-//   if (!req.user.isAdmin || req.user.id !== req.params.userId) {
+//   // Allow only super users to delete posts
+//   if (!req.user.isSuperUser) {
 //     return next(errorHandler(403, 'You are not allowed to delete this post'));
 //   }
 //   try {
@@ -196,7 +202,8 @@ export const updatepost = async (req, res, next) => {
 // };
 
 // export const updatepost = async (req, res, next) => {
-//   if (!req.user.isAdmin || req.user.id !== req.params.userId) {
+//   // Allow only super users to update posts
+//   if (!req.user.isSuperUser) {
 //     return next(errorHandler(403, 'You are not allowed to update this post'));
 //   }
 //   try {
@@ -217,3 +224,5 @@ export const updatepost = async (req, res, next) => {
 //     next(error);
 //   }
 // };
+
+

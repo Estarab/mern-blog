@@ -84,12 +84,12 @@ export default function CreatePost() {
   };
   return (
     <div className='p-3 max-w-3xl mx-auto min-h-screen'>
-      <h1 className='text-center text-3xl my-7 font-semibold'>Create a post</h1>
+      <h1 className='text-center text-3xl my-7 font-semibold'>Post your Work or Business</h1>
       <form className='flex flex-col gap-4' onSubmit={handleSubmit}>
         <div className='flex flex-col gap-4 sm:flex-row justify-between'>
           <TextInput
             type='text'
-            placeholder='Title'
+            placeholder='enter your name and your profession or business'
             required
             id='title'
             className='flex-1'
@@ -144,7 +144,7 @@ export default function CreatePost() {
         )}
         <ReactQuill
           theme='snow'
-          placeholder='Write something...'
+          placeholder='Let people know more about your work or business, Write something here ...'
           className='h-72 mb-12'
           required
           onChange={(value) => {

@@ -25,6 +25,8 @@ import OurPartners from './components/OurPartners';
 import BlogSections from './components/BlogSections';
 import StakeholderPage from './pages/StakeholderPage'; 
 import TeamMemberPage from './pages/TeamMemberPage'; // Import the new component
+import StakeholderSignUp from './components/StakeholderSignUp'; // Import the new component
+
 
 export default function App() {
   return (
@@ -61,6 +63,7 @@ export default function App() {
         <Route path='/blogs' element={<BlogSections />} />
         <Route path='/stakeholder/:name' element={<StakeholderPage />} />
         <Route path='/team-member/:name' element={<TeamMemberPage />} /> {/* New route for team member blog pages */}
+        <Route path='/stakeholder-signup' element={<StakeholderSignUp/>} />
       </Routes>
       
       <Footer />
