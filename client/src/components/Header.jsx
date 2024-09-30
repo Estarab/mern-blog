@@ -47,131 +47,86 @@ export default function Header() {
   };
 
   return (
-    <Navbar className='border-b-2 shadow-lg bg-white dark:bg-gray-800'>
-      {/* Logo */}
-      <Link to='/'>
-        <img
-          src={logo}
-          alt='Logo'
-          className='h-10 w-auto mr-4 rounded-md shadow-lg transition-transform transform hover:scale-105'
-        />
-      </Link>
+    <Navbar className='border-b-2 shadow-lg bg-white dark:bg-gray-800 flex flex-wrap justify-between items-center px-4 py-2'>
+      <div className='flex items-center w-full justify-between lg:w-auto'>
+        {/* Logo */}
+        <Link to='/'>
+          <img
+             src={logo}
+             alt='Logo'
+             className='h-auto max-h-16 w-auto rounded-md shadow-lg transition-transform transform hover:scale-105' // Maintained original size
+           />
+         </Link>
 
-      <form onSubmit={handleSubmit} className='lg:flex w-1/8'> {/* Adjusted width to 1/4 */}
-        <TextInput
-          type='text'
-          placeholder='Search...'
-          rightIcon={AiOutlineSearch}
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          className='w-full max-w-sm rounded-md dark:text-white dark:bg-gray-700' // Further reduced width
-        />
-      </form>
+        {/* Gap between Logo and Search */}
+        <div className='mx-2' />
 
-      <div className='flex items-center gap-4'>
-        {currentUser ? (
-          <Dropdown
-            arrowIcon={false}
-            inline
-            label={
-              <Avatar alt='user' img={currentUser.profilePicture} rounded />
-            }
-            className='z-50'
-          >
-            <Dropdown.Header>
-              <span className='block text-sm'>@{currentUser.username}</span>
-              <span className='block text-sm font-medium truncate'>
-                {currentUser.email}
-              </span>
-            </Dropdown.Header>
-            <Link to={'/dashboard?tab=profile'}>
-              <Dropdown.Item className='hover:bg-gray-200 dark:hover:bg-gray-600 hover:text-gray-900 dark:hover:text-white transition-all transform hover:scale-105'>
-                Profile
-              </Dropdown.Item>
-            </Link>
-            <Dropdown.Divider />
-            <Dropdown.Item
-              onClick={handleSignout}
-              className='hover:bg-gray-200 dark:hover:bg-gray-600 hover:text-gray-900 dark:hover:text-white transition-all transform hover:scale-105'
+        {/* Mobile Header Items */}
+        <form onSubmit={handleSubmit} className='flex items-center w-full max-w-xs'>
+          <TextInput
+            type='text'
+            placeholder='Search...'
+            rightIcon={AiOutlineSearch}
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className='w-20 sm:w-24 rounded-md dark:text-white dark:bg-gray-700' // Adjusted width for mobile
+          />
+        </form>
+
+        <div className='flex items-center gap-4'>
+          {currentUser ? (
+            <Dropdown
+              arrowIcon={false}
+              inline
+              label={
+                <Avatar alt='user' img={currentUser.profilePicture} rounded className='h-10 w-10' />
+              }
+              className='z-50'
             >
-              Sign out
-            </Dropdown.Item>
-          </Dropdown>
-        ) : (
-          <Link to='/sign-in'>
-            <Button gradientDuoTone='purpleToBlue' outline>
-              Sign In
-            </Button>
-          </Link>
-        )}
+              <Dropdown.Header>
+                <span className='block text-sm'>@{currentUser.username}</span>
+                <span className='block text-sm font-medium truncate'>
+                  {currentUser.email}
+                </span>
+              </Dropdown.Header>
+              <Link to={'/dashboard?tab=profile'}>
+                <Dropdown.Item className='hover:bg-gray-200 dark:hover:bg-gray-600 hover:text-gray-900 dark:hover:text-white transition-all transform hover:scale-105'>
+                  Profile
+                </Dropdown.Item>
+              </Link>
+              <Dropdown.Divider />
+              <Dropdown.Item
+                onClick={handleSignout}
+                className='hover:bg-gray-200 dark:hover:bg-gray-600 hover:text-gray-900 dark:hover:text-white transition-all transform hover:scale-105'
+              >
+                Sign out
+              </Dropdown.Item>
+            </Dropdown>
+          ) : (
+            <Link to='/sign-in'>
+              <Button gradientDuoTone='purpleToBlue' outline>
+                Sign In
+              </Button>
+            </Link>
+          )}
 
-        <Navbar.Toggle />
+          <Navbar.Toggle />
+        </div>
       </div>
 
-      <Navbar.Collapse className='mt-2'>
-        <Navbar.Link
-          active={path === '/'}
-          as={'div'}
-          className='hover:text-gray-900 dark:hover:text-white transition-all transform hover:scale-105'
-        >
-          <Link to='/'>Home</Link>
-        </Navbar.Link>
-        
-        <Navbar.Link
-          active={path === '/about'}
-          as={'div'}
-          className='hover:text-gray-900 dark:hover:text-white transition-all transform hover:scale-105'
-        >
-          <Link to='/about'>About</Link>
-        </Navbar.Link>
-
-        <Navbar.Link
-          active={path === '/programs'}
-          as={'div'}
-          className='hover:text-gray-900 dark:hover:text-white transition-all transform hover:scale-105'
-        >
-          <Link to='/programs'>Programs</Link>
-        </Navbar.Link>
-
-        <Navbar.Link
-          active={path === '/get-involved'}
-          as={'div'}
-          className='hover:text-gray-900 dark:hover:text-white transition-all transform hover:scale-105'
-        >
-          <Link to='/get-involved'>Get Involved</Link>
-        </Navbar.Link>
-
-        <Navbar.Link
-          active={path === '/stake-holders'}
-          as={'div'}
-          className='hover:text-gray-900 dark:hover:text-white transition-all transform hover:scale-105'
-        >
-          <Link to='/stake-holders'>Our Team</Link>
-        </Navbar.Link>
-
-        <Navbar.Link
-          active={path === '/stake-holders'}
-          as={'div'}
-          className='hover:text-gray-900 dark:hover:text-white transition-all transform hover:scale-105'
-        >
-          <Link to='/stake-holders'>Stakeholders</Link>
-        </Navbar.Link>
-
-        <Navbar.Link
-          active={path === '/contact-us'}
-          as={'div'}
-          className='hover:text-gray-900 dark:hover:text-white transition-all transform hover:scale-105'
-        >
-          <Link to='/contact-us'>Contact Us</Link>
-        </Navbar.Link>
-
-        <Navbar.Link
-          active={path === '/donate'}
-          as={'div'}
-          className='hover:text-gray-900 dark:hover:text-white transition-all transform hover:scale-105'
-        >
-          <Link to='/donate'>Donate</Link>
-        </Navbar.Link>
+      <Navbar.Collapse className='mt-2 lg:mt-0 w-full'>
+        {['/', '/about', '/programs', '/get-involved', '/stake-holders', '/contact-us', '/donate'].map((link, index) => (
+          <Navbar.Link
+            key={index}
+            active={path === link}
+            as={'div'}
+            className='w-full hover:text-gray-900 dark:hover:text-white transition-all transform hover:scale-105'
+          >
+            <Link to={link} className='block w-full text-center py-2'>
+              {link.charAt(1).toUpperCase() + link.slice(2).replace('-', ' ')}
+            </Link>
+          </Navbar.Link>
+        ))}
       </Navbar.Collapse>
     </Navbar>
   );
@@ -179,13 +134,10 @@ export default function Header() {
 
 
 
-
 // import { Avatar, Button, Dropdown, Navbar, TextInput } from 'flowbite-react';
 // import { Link, useLocation, useNavigate } from 'react-router-dom';
 // import { AiOutlineSearch } from 'react-icons/ai';
-// import { FaMoon, FaSun } from 'react-icons/fa';
 // import { useSelector, useDispatch } from 'react-redux';
-// import { toggleTheme } from '../redux/theme/themeSlice';
 // import { signoutSuccess } from '../redux/user/userSlice';
 // import { useEffect, useState } from 'react';
 // import logo from '../assets/meet-our-team/logo.jpeg'; 
@@ -196,7 +148,6 @@ export default function Header() {
 //   const navigate = useNavigate();
 //   const dispatch = useDispatch();
 //   const { currentUser } = useSelector((state) => state.user);
-//   const { theme } = useSelector((state) => state.theme);
 //   const [searchTerm, setSearchTerm] = useState('');
 
 //   useEffect(() => {
@@ -232,86 +183,74 @@ export default function Header() {
 //   };
 
 //   return (
-//     <Navbar className='border-b-2 shadow-lg bg-white dark:bg-gray-800'>
-//       {/* Logo */}
-//          <Link to='/'>
-//            <img
-//              src={logo}
-//              alt='Logo'
-//              className='h-10 w-auto mr-4 rounded-md shadow-lg transition-transform transform hover:scale-105'
-//            />
+//     <Navbar className='border-b-2 shadow-lg bg-white dark:bg-gray-800 flex flex-wrap justify-between items-center px-4 py-2'>
+//       <div className='flex items-center w-full justify-between lg:w-auto'>
+//         {/* Logo */}
+//         <Link to='/'>
+//           <img
+//             src={logo}
+//             alt='Logo'
+//             className='h-auto max-h-16 w-auto rounded-md shadow-lg transition-transform transform hover:scale-105' // Maintained original size
+//           />
 //         </Link>
 
-//       <form onSubmit={handleSubmit} className=' lg:flex w-1/3'>
-//         <TextInput
-//           type='text'
-//           placeholder='Search...'
-//           rightIcon={AiOutlineSearch}
-//           value={searchTerm}
-//           onChange={(e) => setSearchTerm(e.target.value)}
-//           className='w-full rounded-md dark:text-white dark:bg-gray-700'
-//         />
-//       </form>
+//         {/* Gap between Logo and Search */}
+//         <div className='mx-8' />
 
-//       <div className='flex items-center gap-4'>
-//         {/* <Button
-//           className='w-12 h-10 hidden sm:flex items-center justify-center'
-//           color='gray'
-//           pill
-//           onClick={() => dispatch(toggleTheme())}
-//         >
-//           {theme === 'light' ? <FaSun /> : <FaMoon />}
-//         </Button> */}
+//         {/* Mobile Header Items */}
+//         <form onSubmit={handleSubmit} className='flex items-center w-full max-w-xs'>
+//           <TextInput
+//             type='text'
+//             placeholder='Search...'
+//             rightIcon={AiOutlineSearch}
+//             value={searchTerm}
+//             onChange={(e) => setSearchTerm(e.target.value)}
+//             className='w-20 sm:w-24 rounded-md dark:text-white dark:bg-gray-700' // Adjusted width for mobile
+//           />
+//         </form>
 
-//         {/* <Button
-//           className='w-12 h-10 sm:hidden flex items-center justify-center'
-//           color='gray'
-//           pill
-//           onClick={() => dispatch(toggleTheme())}
-//         >
-//           {theme === 'light' ? <FaSun /> : <FaMoon />}
-//         </Button> */}
-
-//         {currentUser ? (
-//           <Dropdown
-//             arrowIcon={false}
-//             inline
-//             label={
-//               <Avatar alt='user' img={currentUser.profilePicture} rounded />
-//             }
-//             className='z-50'
-//           >
-//             <Dropdown.Header>
-//               <span className='block text-sm'>@{currentUser.username}</span>
-//               <span className='block text-sm font-medium truncate'>
-//                 {currentUser.email}
-//               </span>
-//             </Dropdown.Header>
-//             <Link to={'/dashboard?tab=profile'}>
-//               <Dropdown.Item className='hover:bg-gray-200 dark:hover:bg-gray-600 hover:text-gray-900 dark:hover:text-white transition-all transform hover:scale-105'>
-//                 Profile
-//               </Dropdown.Item>
-//             </Link>
-//             <Dropdown.Divider />
-//             <Dropdown.Item
-//               onClick={handleSignout}
-//               className='hover:bg-gray-200 dark:hover:bg-gray-600 hover:text-gray-900 dark:hover:text-white transition-all transform hover:scale-105'
+//         <div className='flex items-center gap-4'>
+//           {currentUser ? (
+//             <Dropdown
+//               arrowIcon={false}
+//               inline
+//               label={
+//                 <Avatar alt='user' img={currentUser.profilePicture} rounded className='h-10 w-10' />
+//               }
+//               className='z-50'
 //             >
-//               Sign out
-//             </Dropdown.Item>
-//           </Dropdown>
-//         ) : (
-//           <Link to='/sign-in'>
-//             <Button gradientDuoTone='purpleToBlue' outline>
-//               Sign In
-//             </Button>
-//           </Link>
-//         )}
+//               <Dropdown.Header>
+//                 <span className='block text-sm'>@{currentUser.username}</span>
+//                 <span className='block text-sm font-medium truncate'>
+//                   {currentUser.email}
+//                 </span>
+//               </Dropdown.Header>
+//               <Link to={'/dashboard?tab=profile'}>
+//                 <Dropdown.Item className='hover:bg-gray-200 dark:hover:bg-gray-600 hover:text-gray-900 dark:hover:text-white transition-all transform hover:scale-105'>
+//                   Profile
+//                 </Dropdown.Item>
+//               </Link>
+//               <Dropdown.Divider />
+//               <Dropdown.Item
+//                 onClick={handleSignout}
+//                 className='hover:bg-gray-200 dark:hover:bg-gray-600 hover:text-gray-900 dark:hover:text-white transition-all transform hover:scale-105'
+//               >
+//                 Sign out
+//               </Dropdown.Item>
+//             </Dropdown>
+//           ) : (
+//             <Link to='/sign-in'>
+//               <Button gradientDuoTone='purpleToBlue' outline>
+//                 Sign In
+//               </Button>
+//             </Link>
+//           )}
 
-//         <Navbar.Toggle />
+//           <Navbar.Toggle />
+//         </div>
 //       </div>
 
-//       <Navbar.Collapse className='mt-2'>
+//       <Navbar.Collapse className='mt-2 lg:mt-0'>
 //         <Navbar.Link
 //           active={path === '/'}
 //           as={'div'}
@@ -319,7 +258,7 @@ export default function Header() {
 //         >
 //           <Link to='/'>Home</Link>
 //         </Navbar.Link>
-
+        
 //         <Navbar.Link
 //           active={path === '/about'}
 //           as={'div'}
@@ -336,7 +275,6 @@ export default function Header() {
 //           <Link to='/programs'>Programs</Link>
 //         </Navbar.Link>
 
-
 //         <Navbar.Link
 //           active={path === '/get-involved'}
 //           as={'div'}
@@ -344,7 +282,6 @@ export default function Header() {
 //         >
 //           <Link to='/get-involved'>Get Involved</Link>
 //         </Navbar.Link>
-
 
 //         <Navbar.Link
 //           active={path === '/stake-holders'}
@@ -354,7 +291,6 @@ export default function Header() {
 //           <Link to='/stake-holders'>Our Team</Link>
 //         </Navbar.Link>
 
-
 //         <Navbar.Link
 //           active={path === '/stake-holders'}
 //           as={'div'}
@@ -362,7 +298,6 @@ export default function Header() {
 //         >
 //           <Link to='/stake-holders'>Stakeholders</Link>
 //         </Navbar.Link>
-
 
 //         <Navbar.Link
 //           active={path === '/contact-us'}
@@ -372,7 +307,6 @@ export default function Header() {
 //           <Link to='/contact-us'>Contact Us</Link>
 //         </Navbar.Link>
 
-
 //         <Navbar.Link
 //           active={path === '/donate'}
 //           as={'div'}
@@ -380,35 +314,10 @@ export default function Header() {
 //         >
 //           <Link to='/donate'>Donate</Link>
 //         </Navbar.Link>
-
-//         {/* <Dropdown
-//           label='View More Pages '
-//           inline
-//           className='bg-gray-50 hover:bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-900 dark:text-white rounded-lg transition-all duration-200 ease-in-out z-50'
-//         >
-//           <Dropdown.Item className='hover:bg-gray-200 dark:hover:bg-gray-600 hover:text-gray-900 dark:hover:text-white transition-all transform hover:scale-105'>
-//             <Link to='/programs'>Programs</Link>
-//           </Dropdown.Item>
-//           <Dropdown.Item className='hover:bg-gray-200 dark:hover:bg-gray-600 hover:text-gray-900 dark:hover:text-white transition-all transform hover:scale-105'>
-//             <Link to='/get-involved'>Get Involved</Link>
-//           </Dropdown.Item>
-//           <Dropdown.Item className='hover:bg-gray-200 dark:hover:bg-gray-600 hover:text-gray-900 dark:hover:text-white transition-all transform hover:scale-105'>
-//             <Link to='/stake-holders'>Our Team</Link>
-//           </Dropdown.Item>
-//           <Dropdown.Item className='hover:bg-gray-200 dark:hover:bg-gray-600 hover:text-gray-900 dark:hover:text-white transition-all transform hover:scale-105'>
-//             <Link to='/contact-us'>Contact Us</Link>
-//           </Dropdown.Item>
-//         </Dropdown> */}
-
-//         {/* <Link to='/donate'>
-//           <Button
-//             className=' mt-4 ml-4 px-4 py-2 text-white font-semibold rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l transition duration-300 ease-in-out transform hover:scale-110'
-//           >
-//             Donate
-//           </Button>
-//         </Link> */}
 //       </Navbar.Collapse>
 //     </Navbar>
 //   );
 // }
+
+
 
