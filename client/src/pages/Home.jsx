@@ -51,7 +51,7 @@ export default function Home() {
       </div>
       <AboutSection />
       <GetInvolvedComp/>
-      {/* <ProgramsPage/> */}
+      <ProgramsPage/>
       <MeetOurTeam/>
        
       

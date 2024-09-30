@@ -6,6 +6,7 @@ import authRoutes from './routes/auth.route.js';
 import postRoutes from './routes/post.route.js';
 import commentRoutes from './routes/comment.route.js';
 import stakeholderSignUpRoutes from './routes/StakeholderSignUp.route.js';
+import subscribeRoutes from './routes/subscribe.route.js'; // Import the subscription route
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
 import path from 'path';
@@ -50,6 +51,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/post', postRoutes);
 app.use('/api/comment', commentRoutes);
 app.use('/api/stakeholder-signup', stakeholderSignUpRoutes);
+app.use('/api/subscribe', subscribeRoutes); // Register the subscription route
 
 app.use(express.static(path.join(__dirname, '/client/dist')));
 

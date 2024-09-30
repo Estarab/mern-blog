@@ -26,6 +26,8 @@ import BlogSections from './components/BlogSections';
 import StakeholderPage from './pages/StakeholderPage'; 
 import TeamMemberPage from './pages/TeamMemberPage'; // Import the new component
 import StakeholderSignUp from './components/StakeholderSignUp'; // Import the new component
+import NextProgramsPage from './pages/NextProgramsPage';
+import MessageUs from './components/MessageUs';
 
 
 export default function App() {
@@ -58,12 +60,15 @@ export default function App() {
         <Route path='/stake-holders' element={<StakeHolders />} />
         <Route path='/programs' element={<ProgramCard />} />
         <Route path='/post/:postSlug' element={<PostPage />} />
+        <Route path='/message-us' element={<MessageUs/>} />
+
         
         <Route path='/partners' element={<OurPartners />} />
         <Route path='/blogs' element={<BlogSections />} />
         <Route path='/stakeholder/:name' element={<StakeholderPage />} />
         <Route path='/team-member/:name' element={<TeamMemberPage />} /> {/* New route for team member blog pages */}
         <Route path='/stakeholder-signup' element={<StakeholderSignUp/>} />
+        <Route path='/next-programs' element={<NextProgramsPage />} /> {/* New route for upcoming programs */}
       </Routes>
       
       <Footer />
