@@ -30,6 +30,7 @@ import NextProgramsPage from './pages/NextProgramsPage';
 import MessageUs from './components/MessageUs';
 import MeetOurTeam from './components/MeetOurTeam';
 import WhatsAppIcon from './components/WhatsAppIcon';
+import WhatsAppPopup from './components/WhatsAppPopup';
 
 
 
@@ -77,6 +78,7 @@ export default function App() {
       </Routes>
       
       <WhatsAppIcon/>
+      <WhatsAppPopup/>
       <Footer />
     </BrowserRouter>
   );

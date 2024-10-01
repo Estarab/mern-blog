@@ -10,12 +10,12 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        blink: 'blink 1s infinite',
+        'slide-in': 'slide-in 0.5s ease-out forwards',
       },
       keyframes: {
-        blink: {
-          '0%, 100%': { opacity: 0.5 },
-          '50%': { opacity: 1 },
+        'slide-in': {
+          '0%': { transform: 'translateY(20px)', opacity: 0 },
+          '100%': { transform: 'translateY(0)', opacity: 1 },
         },
       },
     },

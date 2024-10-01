@@ -3,7 +3,7 @@ import React from 'react';
 import { FaWhatsapp } from 'react-icons/fa';
 
 const WhatsAppIcon = () => {
-  const whatsappNumber = '+260977219990'; // Replace with your WhatsApp number
+  const whatsappNumber = '+260978718328'; // Replace with your WhatsApp number
   const handleClick = () => {
     window.open(`https://wa.me/${whatsappNumber}`, '_blank');
   };
@@ -11,14 +11,14 @@ const WhatsAppIcon = () => {
   return (
     <div
       onClick={handleClick}
-      className="fixed bottom-5 right-5 cursor-pointer z-50 flex flex-col items-center justify-center"
+      className="fixed bottom-12 right-5 cursor-pointer z-50 flex flex-col items-center justify-center"
     >
-      <div className="bg-white shadow-lg rounded-full p-3 transition-transform duration-200 hover:scale-110 animate-blink">
-        <FaWhatsapp size={30} color="#25D366" />
+      <div className="bg-[#0A3D2D] shadow-lg rounded-full p-3 transition-transform duration-200 hover:scale-110 animate-blink">
+        <FaWhatsapp size={15} color="#25D366" />
       </div>
-      <span className="mt-2 text-xs text-center bg-white rounded px-2 py-1 shadow-md">
-        Let's chat on WhatsApp
-      </span>
+      {/* <span className="mt-2 text-xs text-white text-center bg-[#0A3D2D] rounded px-2 py-1 shadow-md">
+        lets chat
+      </span> */}
     </div>
   );
 };
