@@ -23,12 +23,12 @@ const AboutSection = () => {
   ];
 
   return (
-    <section className="bg-gradient-to-r from-blue-500 to-green-500 py-16 px-8">
+    <section className="bg-gradient-to-r from-blue-500 via-purple-700 to-blue-500 py-16 px-8">
       <div className="container mx-auto space-y-12">
 
         {/* First Section */}
         <animated.div style={firstSectionSpring} className="bg-white rounded-lg shadow-lg p-8 mx-auto">
-          <h2 className="text-4xl font-bold text-purple-600 text-center mb-4">Our Vision</h2>
+          <h2 className="text-4xl font-bold text-purple-500 text-center mb-4">Our Vision</h2>
           <p className="text-gray-600 text-lg text-center mb-6">
             To see individuals take a leadership role in addressing the most urgent issues facing the world, supported by their communities, civil society, government, and businesses.
           </p>
@@ -36,7 +36,7 @@ const AboutSection = () => {
 
         {/* Second Section */}
         <animated.div style={secondSectionSpring} className="bg-white rounded-lg shadow-lg p-8 mx-auto">
-          <h2 className="text-4xl font-bold text-red-600 text-center mb-4">Our Mission</h2>
+          <h2 className="text-4xl font-bold text-purple-500 text-center mb-4">Our Mission</h2>
           <p className="text-gray-600 text-lg text-center mb-6">
             Our mission is to place marginalized people at the forefront of development.
           </p>
@@ -44,7 +44,7 @@ const AboutSection = () => {
 
         {/* Third Section with Bullet Points */}
         <div className="bg-white rounded-lg shadow-lg p-8 mx-auto">
-          <h2 className="text-4xl font-bold text-yellow-600 text-center mb-4">Our Objectives</h2>
+          <h2 className="text-4xl font-bold text-purple-500 text-center mb-4">Our Objectives</h2>
           <ul className="list-disc list-inside text-gray-600 text-lg">
             {bulletPoints.map((point, index) => {
               const bulletPointSpring = useSpring({

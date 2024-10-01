@@ -44,7 +44,7 @@ const programs = [
 
 const ProgramsPage = () => {
   return (
-    <div className="programs-page bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 py-12">
+    <div className="programs-page bg-gradient-to-r from-blue-500 via-purple-700 to-blue-500 py-12">
       <div className="container mx-auto px-6">
         <h1 className="text-4xl font-bold text-white text-center mb-12">Our Programs</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -69,7 +69,7 @@ const ProgramsPage = () => {
           <h2 className="text-3xl font-bold text-white mb-4">Our Next Programs</h2>
           <p className="text-lg text-white mb-6">Get ready to be part of transformative initiatives that uplift our communities!</p>
           <Link to="/next-programs">
-            <button className="bg-white text-purple-600 font-bold py-2 px-4 rounded transition-transform duration-300 transform hover:scale-105">
+            <button className="bg-gradient-to-r from-purple-500  to-pink-500 text-white font-bold py-2 px-4 rounded transition-transform duration-300 transform hover:scale-105">
               Learn More
             </button>
           </Link>

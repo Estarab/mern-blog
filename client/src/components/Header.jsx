@@ -48,7 +48,7 @@ export default function Header() {
 
   return (
   
-     <div className='flex justify-evenly '>
+     <div className='flex justify-evenly bg-gradient-to-r from-blue-500 via-purple-700 to-blue-500 '>
     <Navbar className='border-b-2 shadow-lg bg-white dark:bg-gray-800 flex flex-wrap justify-between items-center px-4 py-2'>
       
       

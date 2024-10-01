@@ -30,9 +30,9 @@ const MeetOurTeam = () => {
   ];
 
   return (
-    <section className="bg-white py-16 px-8">
+    <section className="bg-gradient-to-r from-blue-500 via-purple-700 to-blue-500 py-16 px-8">
       <div className="container mx-auto text-center">
-        <h2 className="text-4xl font-bold text-gray-800 mb-12">Our Leadership</h2>
+        <h2 className="text-4xl font-bold text-white mb-12">Our Leadership</h2>
         
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {teamMembers.map((member, index) => (

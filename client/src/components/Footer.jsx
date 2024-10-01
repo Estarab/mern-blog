@@ -24,7 +24,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-800 text-white py-16 px-8">
+    <footer className="bg-gray-800 text-white py-16 px-8 bg-gradient-to-r from-purple-700 via-purple-950 to-purple-700">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
         
         {/* Subscribe Section */}

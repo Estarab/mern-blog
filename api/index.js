@@ -45,6 +45,10 @@ app.use(cors({
 app.use(express.json());
 app.use(cookieParser());
 
+
+
+
+
 // Register routes
 app.use('/api/user', userRoutes);
 app.use('/api/auth', authRoutes);
@@ -53,11 +57,17 @@ app.use('/api/comment', commentRoutes);
 app.use('/api/stakeholder-signup', stakeholderSignUpRoutes);
 app.use('/api/subscribe', subscribeRoutes); // Register the subscription route
 
+
+
+
 app.use(express.static(path.join(__dirname, '/client/dist')));
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'client', 'dist', 'index.html'));
 });
+
+
+
 
 app.use((err, req, res, next) => {
   const statusCode = err.statusCode || 500;

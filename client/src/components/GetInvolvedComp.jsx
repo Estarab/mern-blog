@@ -3,15 +3,15 @@ import { Link } from 'react-router-dom';
 
 const GetInvolvedComp = () => {
   return (
-    <div className="py-16 bg-gradient-to-r from-gray-100 to-gray-300 text-center">
-      <h2 className="text-4xl font-semibold text-gray-800 mb-10">Get Involved</h2>
+    <div className="py-16 bg-gradient-to-r from-blue-500 via-purple-700 to-blue-500 text-center">
+      <h2 className="text-4xl font-bold text-white mb-10">Get Involved</h2>
       <div className="flex flex-wrap justify-center gap-8">
         
         <Link to="/stakeholder-signup">
           <div className="bg-white rounded-lg shadow-lg p-8 w-72 transform transition-transform hover:-translate-y-3 hover:shadow-xl">
             <h3 className="text-2xl text-gray-700 mb-4">Become a Stakeholder</h3>
             <p className="text-gray-600 mb-6">Enjoy all the benefits that come by being a stakeholder</p>
-            <button className="bg-purple-500 text-white py-2 px-4 rounded hover:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-600 transition-colors">
+            <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white py-2 px-4 rounded hover:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-600 transition-colors">
               Become a Stakeholder
             </button>
           </div>
@@ -20,7 +20,7 @@ const GetInvolvedComp = () => {
         <div className="bg-white rounded-lg shadow-lg p-8 w-72 transform transition-transform hover:-translate-y-3 hover:shadow-xl">
           <h3 className="text-2xl text-gray-700 mb-4">Volunteer Now</h3>
           <p className="text-gray-600 mb-6">Join us in making a difference by volunteering your time and skills.</p>
-          <button className="bg-purple-500 text-white py-2 px-4 rounded hover:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-600 transition-colors">
+          <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white py-2 px-4 rounded hover:bg-blue-500 transition-colors">
             Volunteer Now
           </button>
         </div>
@@ -29,7 +29,7 @@ const GetInvolvedComp = () => {
           <h3 className="text-2xl text-gray-700 mb-4">Partner with Us</h3>
           <p className="text-gray-600 mb-6">Collaborate with us to amplify our impact through strategic partnerships.</p>
           <Link to="/donate">
-            <button className="bg-purple-500 text-white py-2 px-4 rounded hover:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 transition-colors">
+            <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white py-2 px-4 rounded hover:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 transition-colors">
               Partner with Us
             </button>
           </Link>
@@ -39,7 +39,7 @@ const GetInvolvedComp = () => {
           <div className="bg-white rounded-lg shadow-lg p-8 w-72 transform transition-transform hover:-translate-y-3 hover:shadow-xl">
             <h3 className="text-2xl text-gray-700 mb-4">Donate Now</h3>
             <p className="text-gray-600 mb-6">Your contributions help us continue our mission and support those in need.</p>
-            <button className="bg-purple-500 text-white py-2 px-4 rounded hover:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-600 transition-colors">
+            <button className="bg-gradient-to-r from-blue-500 to-pink-500 text-white py-2 px-4 rounded hover:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-600 transition-colors">
               Donate Now
             </button>
           </div>
