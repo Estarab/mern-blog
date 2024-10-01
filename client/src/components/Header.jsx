@@ -47,10 +47,14 @@ export default function Header() {
   };
 
   return (
+  
+     <div className='flex justify-evenly '>
     <Navbar className='border-b-2 shadow-lg bg-white dark:bg-gray-800 flex flex-wrap justify-between items-center px-4 py-2'>
+      
+      
       <div className='flex items-center w-full justify-between lg:w-auto'>
         {/* Logo */}
-        <Link to='/'>
+        <Link to='/home'>
           <img
              src={logo}
              alt='Logo'
@@ -73,7 +77,7 @@ export default function Header() {
           />
         </form>
 
-        <div className='flex items-center gap-4'>
+        <div className='flex items-center gap-4 ml-2'>
           {currentUser ? (
             <Dropdown
               arrowIcon={false}
@@ -104,32 +108,40 @@ export default function Header() {
             </Dropdown>
           ) : (
             <Link to='/sign-in'>
-              <Button gradientDuoTone='purpleToBlue' outline>
-                Sign In
+              <Button gradientDuoTone='purpleToBlue' outline  className='text-sm px-1 py-1'>
+              Sign_In
               </Button>
             </Link>
           )}
-
+ 
           <Navbar.Toggle />
         </div>
       </div>
 
       <Navbar.Collapse className='mt-2 lg:mt-0 w-full'>
-        {['/', '/about', '/programs', '/get-involved', '/stake-holders', '/contact-us', '/donate'].map((link, index) => (
+        {['/', '/home', '/about', '/programs', '/get-involved', '/our-leadership', '/stake-holders', '/blog',  '/contact-us', '/donate'].map((link, index) => (
           <Navbar.Link
             key={index}
             active={path === link}
             as={'div'}
-            className='w-full hover:text-gray-900 dark:hover:text-white transition-all transform hover:scale-105'
+            className=' w-full hover:text-gray-900 dark:hover:text-white transition-all transform hover:scale-105'
           >
             <Link to={link} className='block w-full text-center py-2'>
               {link.charAt(1).toUpperCase() + link.slice(2).replace('-', ' ')}
             </Link>
+            
           </Navbar.Link>
+          
         ))}
+    
+    
       </Navbar.Collapse>
+    
+
     </Navbar>
+    </div>
   );
+  
 }
 
 

@@ -1,4 +1,4 @@
-import MeetOurTeam from "../components/MeetOurTeam";
+//import MeetOurTeam from "../components/MeetOurTeam";
 import OurPartners from "../components/OurPartners";
 
 
@@ -6,7 +6,7 @@ export default function StakeHolders() {
   return (
     <div>
     
-    <MeetOurTeam/>
+    {/* <MeetOurTeam/> */}
       <OurPartners />
 
     </div>

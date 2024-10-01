@@ -28,6 +28,9 @@ import TeamMemberPage from './pages/TeamMemberPage'; // Import the new component
 import StakeholderSignUp from './components/StakeholderSignUp'; // Import the new component
 import NextProgramsPage from './pages/NextProgramsPage';
 import MessageUs from './components/MessageUs';
+import MeetOurTeam from './components/MeetOurTeam';
+import WhatsAppIcon from './components/WhatsAppIcon';
+
 
 
 export default function App() {
@@ -35,9 +38,10 @@ export default function App() {
     <BrowserRouter>
       <ScrollToTop />
       <Header />
+
       
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/home' element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/sign-in' element={<SignIn />} />
         <Route path='/sign-up' element={<SignUp />} />
@@ -69,8 +73,10 @@ export default function App() {
         <Route path='/team-member/:name' element={<TeamMemberPage />} /> {/* New route for team member blog pages */}
         <Route path='/stakeholder-signup' element={<StakeholderSignUp/>} />
         <Route path='/next-programs' element={<NextProgramsPage />} /> {/* New route for upcoming programs */}
+        <Route path='our-leadership' element={<MeetOurTeam/>} />
       </Routes>
       
+      <WhatsAppIcon/>
       <Footer />
     </BrowserRouter>
   );
