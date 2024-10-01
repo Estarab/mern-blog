@@ -11,10 +11,10 @@ const WhatsAppPopup = () => {
       setShowPopup(true);
       const interval = setInterval(() => {
         setShowPopup(true);
-      }, 120000); // 2 minutes in milliseconds
+      }, 300000); // 5 minutes in milliseconds
 
       return () => clearInterval(interval);
-    }, 15000); // 5 seconds in milliseconds
+    }, 30000); // 30 seconds in milliseconds
 
     return () => clearTimeout(timer);
   }, []);
@@ -30,7 +30,8 @@ const WhatsAppPopup = () => {
   if (!showPopup) return null;
 
   return (
-    <div className="fixed bottom-10 right-5 z-50 w-64 bg-[#0A3D2D] text-white rounded-lg shadow-lg p-4 transition-transform transform animate-slide-in">
+    // <div className="fixed bottom-10 right-5 z-50 w-64 bg-[#0A3D2D] text-white rounded-lg shadow-lg p-4 transition-transform transform animate-slide-in">
+    <div className="fixed top-1/2 right-5 transform -translate-y-1/2 z-50 w-64 bg-[#0A3D2D] text-white rounded-lg shadow-lg p-4 transition-transform transform animate-slide-in">
       <div className="flex items-center justify-between">
         <div className="flex items-center">
           <FaWhatsapp size={24} color="#25D366" className="mr-2" />

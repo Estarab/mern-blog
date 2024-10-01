@@ -16,9 +16,9 @@ const WhatsAppIcon = () => {
       <div className="bg-[#0A3D2D] shadow-lg rounded-full p-3 transition-transform duration-200 hover:scale-110 animate-blink">
         <FaWhatsapp size={15} color="#25D366" />
       </div>
-      {/* <span className="mt-2 text-xs text-white text-center bg-[#0A3D2D] rounded px-2 py-1 shadow-md">
-        lets chat
-      </span> */}
+      <span className="mt-2 text-xs text-white text-center bg-[#0A3D2D] rounded px-2 py-1 shadow-md">
+        chat
+      </span>
     </div>
   );
 };
