@@ -117,7 +117,7 @@ const Footer = () => {
 
       {/* Footer Bottom */}
       <div className="mt-12 text-center border-t border-gray-700 pt-8">
-        <p>&copy; 2024 AB Nation Tech. All rights reserved.</p>
+        <p>&copy; 2024 We Are The World Zambia. All rights reserved. Developed by AB Nation Tech</p>
       </div>
     </footer>
   );

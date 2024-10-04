@@ -54,7 +54,7 @@ export default function Header() {
       
       <div className='flex items-center w-full justify-between lg:w-auto'>
         {/* Logo */}
-        <Link to='/home'>
+        <Link to='/'>
           <img
              src={logo}
              alt='Logo'
@@ -119,7 +119,7 @@ export default function Header() {
       </div>
 
       <Navbar.Collapse className='mt-2 lg:mt-0 w-full'>
-        {['/', '/home', '/about', '/programs', '/get-involved', '/our-leadership', '/stake-holders', '/blog',  '/contact-us', '/donate'].map((link, index) => (
+        {['/',  '/about', '/programs', '/get-involved', '/our-leadership', '/stake-holders', '/blog',  '/contact-us', '/donate'].map((link, index) => (
           <Navbar.Link
             key={index}
             active={path === link}

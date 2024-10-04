@@ -9,7 +9,7 @@ const MeetOurTeam = () => {
   const teamMembers = [
     {
       name: 'Zoe Rich',
-      position: 'President and Founder & Board Chair of Stakeholders',
+      position: 'President, Founder and Board Chair of Stakeholders',
       image: teamMember1,
     },
     {

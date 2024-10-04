@@ -3,9 +3,9 @@ import zoe1 from '../assets/meet-our-team/president.jpeg'
 const teamMembers = [
     {
         name: 'Zoe Rich',
-        position: 'President and Founder & Board Chair of Stakeholders',
+        position: 'President,Founder and Board Chair of Stakeholders',
         image: zoe1, // Update with actual image path
-        bio: 'Short bio about Zoe.',
+        bio: 'More about Zoe.',
         articles: [
             // {
             //     title: 'Article One',
@@ -23,7 +23,7 @@ const teamMembers = [
         name: 'Lydia Siamubwa',
         position: 'General Treasure',
         image: 'path/to/zoe-image.jpg', // Update with actual image path
-        bio: 'Short bio about Zoe.',
+        bio: 'More about Lydia.',
         articles: [
             // {
             //     title: 'Article One',
@@ -41,7 +41,7 @@ const teamMembers = [
         name: 'Sydney Kabaso',
         position: 'Project Coordinator',
         image: 'path/to/zoe-image.jpg', // Update with actual image path
-        bio: 'Short bio about Zoe.',
+        bio: 'More about Sydney.',
         articles: [
             // {
             //     title: 'Article One',
@@ -59,7 +59,7 @@ const teamMembers = [
         name: 'Esther Abrahams',
         position: 'Spokesperson',
         image: 'path/to/zoe-image.jpg', // Update with actual image path
-        bio: 'Short bio about Zoe.',
+        bio: 'More about Esther.',
         articles: [
             {
                 title: 'Article One',
