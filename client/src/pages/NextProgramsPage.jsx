@@ -1,16 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import MessageUs from '../components/MessageUs';
+import BlogPage from '../components/BlogPage';
 
 // Upcoming Programs Data
 const upcomingPrograms = [
+  
   {
+
+   
+
     title: 'RADIO PROGRAM',
     details: 'Join us for our upcoming Radio programs aimed at empowering through knowledge and skills.',
   },
   {
-    title: 'Training Program',
-    details: 'Participate in our Training Program, where you can access free training.',
+    title: 'The Remember Me Project',
+    details: 'Remember Me is a transformative initiative by the We Are The World orga',
   },
   // Add more programs as needed
 ];
@@ -18,6 +23,7 @@ const upcomingPrograms = [
 // Get Involved Component
 const GetInvolvedComp = () => {
   return (
+    
     <div className="py-16 bg-gradient-to-r from-gray-100 to-gray-300 text-center">
       <h2 className="text-4xl font-semibold text-gray-800 mb-10">Get Involved</h2>
       <div className="flex flex-wrap justify-center gap-8">
@@ -89,7 +95,8 @@ const NextProgramsPage = () => {
 const CombinedPage = () => {
   return (
     <div>
-      <NextProgramsPage />
+       <BlogPage/>
+      {/* <NextProgramsPage /> */}
       <GetInvolvedComp />
       <MessageUs/>
     </div>

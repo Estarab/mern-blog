@@ -5,7 +5,7 @@ import SignIn from './pages/SignIn';
 import Dashboard from './pages/Dashboard';
 import SignUp from './pages/SignUp';
 import Programs from './pages/Programs';
-import Blog from './pages/Blog';
+//import Blog from './pages/Blog';
 import Donate from './pages/Donate';
 import GetInvolved from './pages/GetInvolved';
 import StakeHolders from './pages/StakeHolders';
@@ -31,6 +31,8 @@ import MessageUs from './components/MessageUs';
 import MeetOurTeam from './components/MeetOurTeam';
 import WhatsAppIcon from './components/WhatsAppIcon';
 import WhatsAppPopup from './components/WhatsAppPopup';
+import BlogPage from './components/BlogPage';
+import ArticlePage from './components/ArticlePage';
 
 
 
@@ -59,7 +61,7 @@ export default function App() {
         </Route> 
 
         <Route path='/programs' element={<ProgramsPage />} />
-        <Route path='/blog' element={<Blog />} />
+        {/* <Route path='/blog' element={<Blog />} /> */}
         <Route path='/donate' element={<Donate />} />
         <Route path='/get-involved' element={<GetInvolved />} />
         <Route path='/stake-holders' element={<StakeHolders />} />
@@ -75,6 +77,8 @@ export default function App() {
         <Route path='/stakeholder-signup' element={<StakeholderSignUp/>} />
         <Route path='/next-programs' element={<NextProgramsPage />} /> {/* New route for upcoming programs */}
         <Route path='our-leadership' element={<MeetOurTeam/>} />
+        <Route path='/blog' element={<BlogPage/>} />
+        <Route path="/article/:id" element={<ArticlePage />} />
         
         
         
