@@ -47,8 +47,8 @@ const BlogPage = () => {
             {/* <h1 className="text-4xl font-bold text-purple-600 mb-8">Blog</h1> */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {posts.map((post) => (
-                    <div key={post.id} className="bg-white shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105">
-                        <img src={post.image} alt={post.title} className="w-full h-48 object-cover" />
+                    <div key={post.id} className="mt-4 bg-white shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105">
+                        <img src={post.image} alt={post.title} className="w-full h-48 object-cover " />
                         <div className="p-4">
                             <h2 className="text-xl font-semibold text-blue-600">{post.title}</h2>
                             <h3 className="text-lg font-medium text-gray-500 mt-1">{post.subtitle}</h3>

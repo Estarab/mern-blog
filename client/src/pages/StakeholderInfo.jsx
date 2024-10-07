@@ -5,7 +5,7 @@ const StakeholderInfo = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-blue-500 to-purple-600 p-6">
       <div className="bg-white rounded-lg shadow-lg p-10 w-full max-w-2xl transform transition-transform duration-300 hover:-translate-y-2">
-        <h2 className="text-3xl font-semibold text-center text-gray-800 mb-6">Become a Stakeholder</h2>
+        <h2 className="text-3xl font-semibold text-center text-gray-800 mb-6">Sign Up to become a Stakeholder</h2>
         <p className="text-gray-700 mb-4">
         As we prepare to launch the The project Remember Me, we invite your individuals, and organization, businesses to join us as stakeholders. Your partnership will help us:
         </p>

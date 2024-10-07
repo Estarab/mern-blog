@@ -59,7 +59,7 @@ export default function DashSidebar() {
             <Sidebar.Item
               active={tab === 'profile'}
               icon={HiUser}
-              label={currentUser.isAdmin ? 'Admin' : 'User'}
+              label={currentUser.isAdmin ? 'Stakeholder' : 'Stakeholder not yet approved'}
               labelColor='dark'
               as='div'
             >
@@ -85,7 +85,7 @@ export default function DashSidebar() {
                   icon={HiOutlineUserGroup}
                   as='div'
                 >
-                  Users
+                  Stakeholders
                 </Sidebar.Item>
               </Link>
               <Link to='/dashboard?tab=comments'>
