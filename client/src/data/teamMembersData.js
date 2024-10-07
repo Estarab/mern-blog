@@ -1,4 +1,6 @@
 import zoe1 from '../assets/meet-our-team/president.jpeg'
+import esther from '../assets/meet-our-team/esther.jpeg'
+
 
 const teamMembers = [
     {
@@ -58,19 +60,19 @@ const teamMembers = [
     {
         name: 'Esther Abrahams',
         position: 'Spokesperson',
-        image: 'path/to/zoe-image.jpg', // Update with actual image path
+        image: esther, // Update with actual image path
         bio: 'More about Esther.',
         articles: [
-            {
-                title: 'Article One',
-                content: 'This is the content of the first article written by Zoe.',
-                image: 'path/to/zoe-article1.jpg' // Update with actual image path
-            },
-            {
-                title: 'Article Two',
-                content: 'This is the content of the second article written by Zoe.',
-                image: 'path/to/zoe-article2.jpg'
-            },
+            // {
+            //     title: 'Article One',
+            //     content: 'This is the content of the first article written by Zoe.',
+            //     image: 'path/to/zoe-article1.jpg' // Update with actual image path
+            // },
+            // {
+            //     title: 'Article Two',
+            //     content: 'This is the content of the second article written by Zoe.',
+            //     image: 'path/to/zoe-article2.jpg'
+            // },
         ],
     },
     // Add other team members similarly...
