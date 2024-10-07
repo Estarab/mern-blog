@@ -42,8 +42,8 @@ export default function SignUp() {
       <div className='flex p-3 max-w-3xl mx-auto flex-col md:flex-row md:items-center gap-5'>
         {/* left */}
         <div className='flex-1'>
-        <Link to="/" className=' font-bold dark:text-white text-2xl'>
-       <span className='px-2 py-1 bg-gradient-to-r from-teal-500 via-teal-500 to-pink-500 rounded-lg text-white'>We Are The World Zambia</span>
+        <Link to="/" className=' font-bold dark:text-white text-1xl'>
+       <span className='px-2 py-1 bg-gradient-to-r from-teal-500 via-teal-500 to-pink-500 rounded-lg text-white'>Sign Up to Become a Stakeholder</span>
        </Link>
           <p className='text-sm mt-5'>
             You can sign up with your email and password

@@ -33,6 +33,8 @@ import WhatsAppIcon from './components/WhatsAppIcon';
 import WhatsAppPopup from './components/WhatsAppPopup';
 import BlogPage from './components/BlogPage';
 import ArticlePage from './components/ArticlePage';
+import StakeholderInfo from './pages/StakeholderInfo';
+
 
 
 
@@ -79,6 +81,7 @@ export default function App() {
         <Route path='our-leadership' element={<MeetOurTeam/>} />
         <Route path='/blog' element={<BlogPage/>} />
         <Route path="/article/:id" element={<ArticlePage />} />
+        <Route path='/stakeholder-info' element={<StakeholderInfo/>} />
         
         
         

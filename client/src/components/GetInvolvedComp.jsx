@@ -7,7 +7,7 @@ const GetInvolvedComp = () => {
       <h2 className="text-4xl font-bold text-white mb-10">Get Involved</h2>
       <div className="flex flex-wrap justify-center gap-8">
         
-        <Link to="/stakeholder-signup">
+        <Link to="/stakeholder-info">
           <div className="bg-white rounded-lg shadow-lg p-8 w-72 transform transition-transform hover:-translate-y-3 hover:shadow-xl">
             <h3 className="text-2xl text-gray-700 mb-4">Become a Stakeholder</h3>
             <p className="text-gray-600 mb-6">Enjoy all the benefits that come by being a stakeholder</p>

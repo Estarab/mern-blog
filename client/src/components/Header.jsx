@@ -107,9 +107,9 @@ export default function Header() {
               </Dropdown.Item>
             </Dropdown>
           ) : (
-            <Link to='/sign-in'>
+            <Link to='/stakeholder-info'>
               <Button gradientDuoTone='purpleToBlue' outline  className='text-sm px-1 py-1'>
-              Sign_In
+               Sign_in
               </Button>
             </Link>
           )}
