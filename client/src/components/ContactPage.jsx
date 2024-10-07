@@ -97,13 +97,13 @@ const ContactPage = () => {
       {/* Lower Section */}
       <animated.div style={fadeIn} className="mt-10">
         <h4 className="text-3xl font-semibold mb-4">Our Location</h4>
-        <iframe
+        {/* <iframe
           title="Google Map"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345091545!2d144.95565131531927!3d-37.817313979751675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d43f4a7d1c7%3A0xfb6e9d77b9a75934!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1610410112453!5m2!1sen!2sau"
           className="w-full h-96 border-none"
           allowFullScreen=""
           loading="lazy"
-        ></iframe>
+        ></iframe> */}
       </animated.div>
     </div>
   );
