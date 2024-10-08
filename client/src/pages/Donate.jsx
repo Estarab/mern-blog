@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FaCreditCard } from 'react-icons/fa';
 import { SiAirtel } from 'react-icons/si';
 
-// // Import images from the assets folder
+// Import images from the assets folder
 import airtelImage1 from '../assets/send money steps/airtel1.jpg';
 import airtelImage2 from '../assets/send money steps/airtel2.jpg';
 import airtelImage3 from '../assets/send money steps/airtel3.jpg';
@@ -17,22 +17,6 @@ import mtnImage3 from '../assets/send money steps/mtn3.jpg';
 import mtnImage4 from '../assets/send money steps/mtn4.jpg';
 import mtnImage5 from '../assets/send money steps/mtn5.jpg';
 import mtnImage6 from '../assets/send money steps/mtn6.jpg';
-
-
-// import zamtelImage1 from '../assets/about image/misdsdion.jpeg';
-// import zamtelImage2 from '../assets/about image/misdsdion.jpeg';
-// import zamtelImage3 from '../assets/about image/misdsdion.jpeg';
-// import zamtelImage4 from '../assets/about image/misdsdion.jpeg';
-// import zamtelImage5 from '../assets/about image/misdsdion.jpeg';
-// import zamtelImage6 from '../assets/about image/misdsdion.jpeg';
-
-// import cardImage1 from '../assets/about image/misdsdion.jpeg';
-// import cardImage2 from '../assets/about image/misdsdion.jpeg';
-// import cardImage3 from '../assets/about image/misdsdion.jpeg';
-// import cardImage4 from '../assets/about image/misdsdion.jpeg';
-// import cardImage5 from '../assets/about image/misdsdion.jpeg';
-// import cardImage6 from '../assets/about image/misdsdion.jpeg';
-
 
 const steps = {
   'Airtel Money': [
@@ -51,25 +35,9 @@ const steps = {
     'Select option 5.EcoBank',
     'Enter this account number : 5600000143700',
     'Enter any reference (2 Digits and above).',
-     'Enter any amount you want to donate.',
+    'Enter any amount you want to donate.',
     'Confirm the transaction details and Enter your Pin .'
   ],
-  'Zamtel': [
-    // 'Launch the Zamtel app on your phone.',
-    // 'Go to the "Payments" section.',
-    // 'Enter the donation amount.',
-    // 'Input the recipient’s phone number.',
-    // 'Review the transaction and confirm.',
-    // 'You will get a confirmation message once done.'
-  ],
-  'Card': [
-    'Click on the payment link provided.',
-    'Enter your card details (number, expiry date, CVV).',
-    'Input the donation amount.',
-    'Fill in your billing details (name, email, address).',
-    'Review your payment and confirm.',
-    'You will receive a confirmation email shortly.'
-  ]
 };
 
 const DonatePage = () => {
@@ -107,8 +75,6 @@ const DonatePage = () => {
   const images = {
     'Airtel Money': [airtelImage1, airtelImage2, airtelImage3, airtelImage4, airtelImage5, airtelImage6, airtelImage7],
     'MTN': [mtnImage1, mtnImage2, mtnImage3, mtnImage4, mtnImage5, mtnImage6],
-    // 'Zamtel': [zamtelImage1, zamtelImage2, zamtelImage3, zamtelImage4, zamtelImage5, zamtelImage6],
-    // 'Card': [cardImage1, cardImage2, cardImage3, cardImage4, cardImage5, cardImage6],
   };
 
   const handleNextImage = () => {
@@ -151,7 +117,7 @@ const DonatePage = () => {
         <>
           <h3 className="text-xl font-bold mb-4">Choose Payment Method</h3>
           <div className="payment-options flex flex-col sm:flex-row justify-center items-center mb-6 space-y-4 sm:space-y-0 sm:space-x-4">
-            {['Airtel Money', 'MTN'/*, 'Zamtel', 'Card'*/].map((method) => (
+            {['Airtel Money', 'MTN'].map((method) => (
               <button
                 key={method}
                 onClick={() => handlePaymentMethodChange(method)}
@@ -183,19 +149,24 @@ const DonatePage = () => {
               <div className="flex items-center justify-between mb-4">
                 <button
                   onClick={handlePrevImage}
-                  className={`bg-gray-200 p-2 rounded ${currentImageIndex === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
+                  className={`bg-gray-200 p-2 rounded font-bold ${currentImageIndex === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
                   disabled={currentImageIndex === 0}
                 >
                   &lt;
                 </button>
-                <img
-                  src={images[paymentMethod][currentImageIndex]}
-                  alt={`${paymentMethod} Step ${currentImageIndex + 1}`}
-                  className="h-64 object-contain"
-                />
+
+                {/* Scrollable Image Container */}
+                <div className="overflow-x-auto w-full max-w-xs md:max-w-md flex justify-center items-center">
+                  <img
+                    src={images[paymentMethod][currentImageIndex]}
+                    alt={`${paymentMethod} Step ${currentImageIndex + 1}`}
+                    className="h-64 object-contain" // Ensure images fit well
+                  />
+                </div>
+
                 <button
                   onClick={handleNextImage}
-                  className={`bg-gray-200 p-2 rounded ${currentImageIndex === images[paymentMethod].length - 1 ? 'opacity-50 cursor-not-allowed' : ''}`}
+                  className={`bg-gray-200 p-2 rounded font-bold ${currentImageIndex === images[paymentMethod].length - 1 ? 'opacity-50 cursor-not-allowed' : ''}`}
                   disabled={currentImageIndex === images[paymentMethod].length - 1}
                 >
                   &gt;
@@ -210,7 +181,6 @@ const DonatePage = () => {
 };
 
 export default DonatePage;
-
 
 
 
