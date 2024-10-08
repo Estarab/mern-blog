@@ -7,13 +7,14 @@ const StakeholderInfo = () => {
       <div className="bg-white rounded-lg shadow-lg p-10 w-full max-w-2xl transform transition-transform duration-300 hover:-translate-y-2">
 
       
-        <h2 className="text-3xl font-semibold text-center text-gray-800 mb-1 mt-4">Sign Up to become a Stakeholder</h2>
-        <div className='flex gap-2 text-sm mt-1 justify-center'>
+      <div className='flex gap-2 text-sm mt-1 justify-center'>
             <span>Already a stakeholder?</span>
             <Link to='/sign-in' className='text-blue-500'>
               Sign In
             </Link>
           </div>
+        <h2 className="text-3xl font-semibold text-center text-gray-800 mb-1 mt-4">Sign Up to become a Stakeholder</h2>
+        
 
         
 

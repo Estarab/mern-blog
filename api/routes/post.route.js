@@ -36,4 +36,3 @@ export default router;
 // router.put('/updatepost/:postId/:userId', superUserMiddleware, updatepost);
 
 // export default router;
-

@@ -34,6 +34,7 @@ import WhatsAppPopup from './components/WhatsAppPopup';
 import BlogPage from './components/BlogPage';
 import ArticlePage from './components/ArticlePage';
 import StakeholderInfo from './pages/StakeholderInfo';
+import PaymentForm from './components/PaymentForm';
 
 
 
@@ -82,6 +83,7 @@ export default function App() {
         <Route path='/blog' element={<BlogPage/>} />
         <Route path="/article/:id" element={<ArticlePage />} />
         <Route path='/stakeholder-info' element={<StakeholderInfo/>} />
+        <Route path='payment-form' element={<PaymentForm/>} />
         
         
         
