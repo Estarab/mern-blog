@@ -69,9 +69,10 @@ export default function DashUsers() {
         <>
           <Table hoverable className='shadow-md'>
             <Table.Head>
-              <Table.HeadCell>Date created</Table.HeadCell>
+              <Table.HeadCell>Date Signed Up</Table.HeadCell>
               <Table.HeadCell>User image</Table.HeadCell>
               <Table.HeadCell>Username</Table.HeadCell>
+              <Table.HeadCell>Phone Number</Table.HeadCell>
               <Table.HeadCell>Email</Table.HeadCell>
               <Table.HeadCell>{/*Admin*/}Stakeholder</Table.HeadCell>
               {/* <Table.HeadCell>Delete</Table.HeadCell> */}
@@ -90,6 +91,7 @@ export default function DashUsers() {
                     />
                   </Table.Cell>
                   <Table.Cell>{user.username}</Table.Cell>
+                  <Table.Cell>{user.phone}</Table.Cell>
                   <Table.Cell>{user.email}</Table.Cell>
                   <Table.Cell>
                     {user.isAdmin ? (
@@ -152,6 +154,7 @@ export default function DashUsers() {
     </div>
   );
 }
+
 
 
 // import { Modal, Table, Button } from 'flowbite-react';
@@ -229,8 +232,8 @@ export default function DashUsers() {
 //               <Table.HeadCell>User image</Table.HeadCell>
 //               <Table.HeadCell>Username</Table.HeadCell>
 //               <Table.HeadCell>Email</Table.HeadCell>
-//               <Table.HeadCell>Admin</Table.HeadCell>
-//               <Table.HeadCell>Delete</Table.HeadCell>
+//               <Table.HeadCell>{/*Admin*/}Stakeholder</Table.HeadCell>
+//               {/* <Table.HeadCell>Delete</Table.HeadCell> */}
 //             </Table.Head>
 //             {users.map((user) => (
 //               <Table.Body className='divide-y' key={user._id}>
@@ -308,3 +311,5 @@ export default function DashUsers() {
 //     </div>
 //   );
 // }
+
+

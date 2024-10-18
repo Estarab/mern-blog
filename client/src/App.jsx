@@ -35,6 +35,7 @@ import BlogPage from './components/BlogPage';
 import ArticlePage from './components/ArticlePage';
 import StakeholderInfo from './pages/StakeholderInfo';
 import PaymentForm from './components/PaymentForm';
+import RememberMeProjectPage from './pages/RememberMeProjectPage';
 
 
 
@@ -84,6 +85,9 @@ export default function App() {
         <Route path="/article/:id" element={<ArticlePage />} />
         <Route path='/stakeholder-info' element={<StakeholderInfo/>} />
         <Route path='payment-form' element={<PaymentForm/>} />
+        
+        <Route path='/remember-me-project-page' element={<RememberMeProjectPage/>} />
+        
         
         
         

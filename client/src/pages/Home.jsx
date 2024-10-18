@@ -2,14 +2,17 @@ import { Link } from 'react-router-dom';
 import CallToAction from '../components/CallToAction';
 import { useEffect, useState } from 'react';
 import PostCard from '../components/PostCard';
-import BannerProduct from '../components/BannerProduct';
+//import BannerProduct from '../components/BannerProduct';
 import OurPartners from '../components/OurPartners';
 import AboutSection from '../components/AboutSection';
-import BigDonateButton from '../components/BigDonateButton';
+//import BigDonateButton from '../components/BigDonateButton';
 //import GetInvolved from '../components/GetInvolvedComp';
 import GetInvolvedComp from '../components/GetInvolvedComp';
 import MeetOurTeam from '../components/MeetOurTeam';
 import ProgramsPage from '../components/ProgramCard';
+//import RememberMeProject from '../components/RememberMeProject';
+import ImageSlider from '../components/ImageSlider';
+import RememberMeProjectTitle from '../components/RememberMeProjectTitle';
 
 
 export default function Home() {
@@ -26,16 +29,16 @@ export default function Home() {
   return (
     <div className='bg-gradient-to-r from-blue-500 via-purple-700 to-blue-500'>
       <div className='relative z-40'>
-      <BannerProduct/>
+      {/* <BannerProduct/> */}
       <div className='bg-gray-100'>
-      <BigDonateButton/>
+      {/* <BigDonateButton/> */}
       </div>
       
       </div>
       
       
       
-      <div className='flex flex-col gap-6 bg-gradient-to-r from-blue-500 via-purple-700 to-blue-500  p-20 px-3 max-w-8xl mx-auto '>
+      {/* <div className='flex flex-col gap-6 bg-gradient-to-r from-blue-500 via-purple-700 to-blue-500  p-20 px-3 max-w-8xl mx-auto '>
      
         <h1 className='text-3xl font-bold lg:text-4xl text-center text-white'>We Are The World Zambia</h1>
         
@@ -48,7 +51,10 @@ export default function Home() {
         >
           CLICK HERE TO KNOW MORE ABOUT US
         </Link>
-      </div>
+      </div> */}
+      <RememberMeProjectTitle/>
+      <ImageSlider/>
+      {/* <RememberMeProject/> */}
       <AboutSection />
       <GetInvolvedComp/>
       <ProgramsPage/>
