@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import image1 from '../assets/remember me/img1.jpg';
-import image2 from '../assets/remember me/img2.jpg';
-import image3 from '../assets/remember me/img3.jpg';
-import image4 from '../assets/remember me/img4.jpg';
-import image5 from '../assets/remember me/photorealistic-kid-refugee-camp.jpg';
+import image1 from '../assets/remember me/img11.jpg';
+import image2 from '../assets/remember me/img22.jpg';
+import image3 from '../assets/remember me/img33.jpg';
+import image4 from '../assets/remember me/img44.jpg';
+import image5 from '../assets/remember me/img55.jpg';
 
 const images = [
   { src: image1, title: "Empower Lives: The Remember Me Project", description: "Join us in making a difference in the lives of homeless individuals, ." },
