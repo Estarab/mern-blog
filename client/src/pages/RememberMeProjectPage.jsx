@@ -1,10 +1,10 @@
 // RememberMeProjectPage.jsx
 import React from 'react';
-import homelessImage from '../assets/remember me/img1.jpg';
-import projectDurationImage from '../assets/remember me/img2.jpg';
-import keyObjectivesImage from '../assets/remember me/img3.jpg';
-import projectComponentsImage from '../assets/remember me/img4.jpg';
-import implementationPlanImage from '../assets/remember me/img5.jpg';
+import homelessImage from '../assets/remember me/img111.jpg';
+import projectDurationImage from '../assets/remember me/img22.jpg';
+import keyObjectivesImage from '../assets/remember me/img33.jpg';
+import projectComponentsImage from '../assets/remember me/img44.jpg';
+import implementationPlanImage from '../assets/remember me/img555.jpg';
 import outcomesImage from '../assets/remember me/photorealistic-kid-refugee-camp.jpg';
 
 const RememberMeProjectPage = () => {
@@ -19,7 +19,7 @@ const RememberMeProjectPage = () => {
 
       {[
         {
-          title: "Introduction",
+          title: "Remember Me",
           content: (
             <p>
               "Remember Me" is a transformative initiative by the We Are The World organization, aimed at rehabilitating homeless street persons by providing comprehensive support through emergency shelter, healthcare, vocational training, and integration into society as productive, contributing citizens. This initiative will be documented and aired as a live TV show to raise awareness and garner public support. The project will be replicated in 160 districts across Zambia with a budget of K30,000,000.00 per district.
