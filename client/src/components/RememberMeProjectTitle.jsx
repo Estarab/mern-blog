@@ -10,7 +10,7 @@ const RememberMeProjectTitle = () => {
     <div className="relative w-full h-screen">
       <ImageSlider/>
 
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center bg-black bg-opacity-50">
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center bg-black bg-opacity-30">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fadeIn"></h1>
         <p className="text-lg md:text-xl max-w-2xl mb-8 animate-fadeIn">
           {/* Our mission is to rehabilitate homeless street persons by providing comprehensive support through emergency shelter, healthcare, vocational training, and integration into society as productive, contributing citizens. */}

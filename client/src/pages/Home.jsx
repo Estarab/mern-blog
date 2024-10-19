@@ -27,10 +27,10 @@ export default function Home() {
     fetchPosts();
   }, []);
   return (
-    <div className='bg-gradient-to-r from-blue-500 via-purple-700 to-blue-500'>
+    <div className='bg-slate-500'>
       <div className='relative z-40'>
       {/* <BannerProduct/> */}
-      <div className='bg-gray-100'>
+      <div className='bg-teal-300'>
       {/* <BigDonateButton/> */}
       </div>
       
