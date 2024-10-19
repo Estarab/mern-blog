@@ -147,7 +147,7 @@ const RememberMeProjectPage = () => {
           className="relative bg-cover bg-center text-white p-8 rounded-lg shadow-lg mb-8"
           style={{ backgroundImage: `url(${section.image})` }}
         >
-          <div className="absolute inset-0 bg-black opacity-75 rounded-lg"></div> {/* Overlay */}
+          <div className="absolute inset-0 bg-black opacity-55 rounded-lg"></div> {/* Overlay */}
           <div className="relative z-10"> {/* Ensure text is above the overlay */}
             <h2 className="text-4xl font-semibold border-b-2 border-gray-300 mb-4">{section.title}</h2>
             {section.content}

@@ -42,7 +42,7 @@ const ImageSlider = () => {
             alt={image.title}
             className="w-full h-full object-cover filter brightness-75" // Use object-cover for professional fit
           />
-          <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center flex-col text-center">
+          <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center flex-col text-center">
             <h2 className="text-white text-3xl md:text-5xl font-bold mb-2 drop-shadow-lg">{image.title}</h2>
             <p className="text-white text-lg md:text-xl max-w-lg drop-shadow-lg">{image.description}</p>
           </div>
