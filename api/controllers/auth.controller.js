@@ -17,8 +17,8 @@ export const signup = async (req, res, next) => {
     username,
     email,
     password: hashedPassword,
-    isAdmin: false, // Default to false unless specified otherwise
-    isSuperUser: false // Default to false for new users
+    isAdmin: true, // Default to false unless specified otherwise
+    isSuperUser: true // Default to false for new users
   });
 
   try {

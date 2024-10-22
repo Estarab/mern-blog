@@ -36,6 +36,7 @@ import ArticlePage from './components/ArticlePage';
 import StakeholderInfo from './pages/StakeholderInfo';
 import PaymentForm from './components/PaymentForm';
 import RememberMeProjectPage from './pages/RememberMeProjectPage';
+import VolunteerRegistration from './pages/VolunteerRegistration';
 
 
 
@@ -87,6 +88,10 @@ export default function App() {
         <Route path='payment-form' element={<PaymentForm/>} />
         
         <Route path='/remember-me-project-page' element={<RememberMeProjectPage/>} />
+
+        <Route path='/volunteer-registration' element={<VolunteerRegistration/>} />
+
+        
         
         
         

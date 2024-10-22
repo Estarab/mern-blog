@@ -35,7 +35,8 @@ const GetInvolvedComp = () => {
               </button>
             </div>
           </Link>
-
+          
+          <Link to="/volunteer-registration">   
           <div className="relative rounded-lg p-8 w-72 transform transition-transform hover:-translate-y-3 hover:shadow-xl overflow-hidden">
             <div
               className="absolute inset-0 bg-cover bg-center blur-sm transition-all duration-300"
@@ -50,6 +51,7 @@ const GetInvolvedComp = () => {
               Volunteer Now
             </button>
           </div>
+          </Link>
 
           <div className="relative rounded-lg p-8 w-72 transform transition-transform hover:-translate-y-3 hover:shadow-xl overflow-hidden">
             <div

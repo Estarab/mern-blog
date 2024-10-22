@@ -39,7 +39,7 @@ const MeetOurTeam = () => {
         backgroundPosition: 'center',
       }}
     >
-      <div className="bg-black bg-opacity-90 py-16 px-8 rounded-lg">
+      <div className="bg-black bg-opacity-50 py-16 px-8 rounded-lg">
         <div className="container mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-12">Our Leadership</h2>
           
