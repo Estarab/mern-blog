@@ -24,7 +24,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-800 text-white py-16 px-8 bg-gradient-to-r from-purple-950 via-blue-500 to-purple-950">
+    <footer className="bg-gray-800 text-white py-16 px-8 bg-gradient-to-r from-teal-900 via-teal-500 to-teal-800">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
         
         {/* Subscribe Section */}
@@ -62,19 +62,19 @@ const Footer = () => {
             <strong>Email:</strong> wearetheworldzambia@gmail.com
           </p>
           <p className="mb-2">
-            <strong>Office:</strong> +260955522564, +2609642628
+            <strong>Office:</strong> +260955522564
           </p>
           <p className="mb-2">
             <strong>Mobile:</strong> +260776214959
           </p>
-          <div className="mt-4">
-            <a href="#" className="text-blue-400 hover:text-blue-600 transition duration-300 mr-4">
+          <div className=" mt-4 bg-teal-200">
+            <a href="https://web.facebook.com/profile.php?id=61567253073894" className="text-blue-700 hover:text-blue-900 transition duration-300 mr-4">
               <BsFacebook className="inline-block mr-1" /> Facebook
             </a>
-            <a href="#" className="text-blue-400 hover:text-blue-600 transition duration-300 mr-4">
+            <a href="#" className="text-blue-700 hover:text-blue-900 transition duration-300 mr-4">
               <BsTwitter className="inline-block mr-1" /> Twitter
             </a>
-            <a href="#" className="text-blue-400 hover:text-blue-600 transition duration-300">
+            <a href="#" className="text-blue-700 hover:text-blue-900 transition duration-300 ">
               <BsInstagram className="inline-block mr-1" /> Instagram
             </a>
           </div>
