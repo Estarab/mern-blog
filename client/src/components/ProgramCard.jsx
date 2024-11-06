@@ -72,8 +72,8 @@ const ProgramsPage = () => {
 
           {/* Captivating Caption */}
           <div className="mt-12 text-center">
-            <h2 className="text-3xl font-bold text-teal-500 mb-4"> Next Programs</h2>
-            <p className="text-lg text-teal-500 mb-6">Get ready to be part of  transformative initiatives that uplift our communities!</p>
+            <h2 className="text-3xl font-bold text-teal-500 mb-4">Our Next Programs</h2>
+            <p className="text-lg text-teal-500 mb-6">Get ready to be part of very transformative initiatives that uplift our communities!</p>
             <Link to="/next-programs">
               <button className="bg-gradient-to-r from-teal-500 to-pink-500 text-white font-bold py-2 px-4 rounded transition-transform duration-300 transform hover:scale-105">
                 Learn More
