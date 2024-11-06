@@ -7,7 +7,7 @@ const stripHtmlTags = (html) => {
 
 export default function PostCard({ post }) {
   return (
-    <div className='group relative w-full border border-white hover:border-2 h-[400px] overflow-hidden rounded-lg sm:w-[30%] transition-all'>
+    <div className='group relative w-full border border-teal-500 hover:border-2 h-[400px] overflow-hidden rounded-lg sm:w-[30%] transition-all'>
       <Link to={`/post/${post.slug}`}>
         <img
           src={post.image}
@@ -22,7 +22,7 @@ export default function PostCard({ post }) {
         </p>
         <Link
           to={`/post/${post.slug}`}
-          className='z-10 absolute bottom-2 left-0 right-0 border border-white text-white hover:bg-gradient-to-r from-purple-500  to-pink-500 hover:text-white transition-all duration-300 text-center py-2 rounded-md m-2'
+          className='z-10 absolute bottom-2 left-0 right-0 border border-teal-500 text-teal-500 hover:bg-gradient-to-r from-teal-500  to-purple-500 hover:text-white transition-all duration-300 text-center py-2 rounded-md m-2'
         >
           Read more
         </Link>

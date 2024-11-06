@@ -13,6 +13,7 @@ import ProgramsPage from '../components/ProgramCard';
 //import RememberMeProject from '../components/RememberMeProject';
 import ImageSlider from '../components/ImageSlider';
 import RememberMeProjectTitle from '../components/RememberMeProjectTitle';
+import WhatWeDo from '../components/WhatWeDo';
 
 
 export default function Home() {
@@ -27,7 +28,7 @@ export default function Home() {
     fetchPosts();
   }, []);
   return (
-    <div className='bg-slate-500'>
+    <div className='bg-slate-200'>
       <div className='relative z-40'>
       {/* <BannerProduct/> */}
       <div className='bg-teal-300'>
@@ -56,6 +57,7 @@ export default function Home() {
       <ImageSlider/>
       {/* <RememberMeProject/> */}
       <AboutSection />
+      <WhatWeDo/>
       <GetInvolvedComp/>
       <ProgramsPage/>
       <MeetOurTeam/>
@@ -72,7 +74,7 @@ export default function Home() {
       <div className='max-w-6xl mx-auto p-3 flex flex-col gap-8 py-7 '>
         {posts && posts.length > 0 && (
           <div className='flex flex-col gap-6'>
-            <h2 className='text-2xl font-bold text-center text-white'>Stakeholders and what they do</h2>
+            <h2 className='text-2xl font-bold text-center text-teal-500'>Stakeholders and what they do</h2>
             <div className='flex flex-wrap gap-4'>
               {posts.map((post) => (
                 <PostCard key={post._id} post={post} />
@@ -80,7 +82,7 @@ export default function Home() {
             </div>
             <Link
               to={'/search'}
-              className='text-lg text-white hover:underline text-center'
+              className='text-lg text-teal-500 hover:underline text-center'
             >
               View all posts
             </Link>

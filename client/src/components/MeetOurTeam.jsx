@@ -4,7 +4,7 @@ import teamMember1 from '../assets/meet-our-team/president.jpeg';
 import teamMember2 from '../assets/meet-our-team/general treasure.jpeg'; 
 import teamMember3 from '../assets/meet-our-team/project coordinator.jpeg'; 
 import teamMember4 from '../assets/meet-our-team/esther.jpeg'; 
-import backgroundImage from '../assets/bg/chibolya.jpeg'; // Import your background image
+//import backgroundImage from '../assets/bg/chibolya.jpeg'; // Import your background image
 
 const MeetOurTeam = () => {
   const teamMembers = [
@@ -32,16 +32,16 @@ const MeetOurTeam = () => {
 
   return (
     <section 
-      className="py-16 px-8 relative"
-      style={{
-        backgroundImage: `url(${backgroundImage})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
+      className="py-16 px-8 relative bg-slate-100"
+      // style={{
+      //   backgroundImage: `url(${backgroundImage})`,
+      //   backgroundSize: 'cover',
+      //   backgroundPosition: 'center',
+      // }}
     >
-      <div className="bg-black bg-opacity-50 py-16 px-8 rounded-lg">
+      <div className="bg-black bg-opacity-0 py-16 px-8 rounded-lg">
         <div className="container mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-12">Our Leadership</h2>
+          <h2 className="text-4xl font-bold text-teal-500 mb-12">Our Leadership</h2>
           
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {teamMembers.map((member, index) => (
@@ -54,7 +54,7 @@ const MeetOurTeam = () => {
                     alt={member.name} 
                     className="w-32 h-32 rounded-full mx-auto mb-4"
                   />
-                  <h3 className="text-xl font-semibold text-gray-800">{member.name}</h3>
+                  <h3 className="text-xl font-semibold text-teal-600">{member.name}</h3>
                   <p className="text-gray-600">{member.position}</p>
                 </div>
               </Link>

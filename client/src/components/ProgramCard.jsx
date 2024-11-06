@@ -10,7 +10,7 @@ import Program5Image from '../assets/about image/mission.jpeg';
 import Program6Image from '../assets/remember me/img55.jpg';
 
 // Main background image
-import MainBgImage from '../assets/bg/chibolya.jpeg';
+// import MainBgImage from '../assets/bg/chibolya.jpeg';
 
 const programs = [
   {
@@ -48,13 +48,13 @@ const programs = [
 const ProgramsPage = () => {
   return (
     <div 
-      className="programs-page relative py-12"
-      style={{ backgroundImage: `url(${MainBgImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+      className="programs-page relative py-12 bg-slate-200"
+      // style={{ backgroundImage: `url(${MainBgImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
     >
-      <div className="bg-black bg-opacity-50 py-12">
+      <div className="bg-white bg-opacity-0 py-12">
         <div className="container mx-auto px-6">
-          <h1 className="text-4xl font-bold text-white text-center mb-12">Our Programs</h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <h1 className="text-4xl font-bold text-teal-500 text-center mb-12">Our Programs</h1>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {programs.map((program, index) => (
               <div key={index} className="program-card bg-white rounded-lg shadow-lg">
                 <img 
@@ -63,7 +63,7 @@ const ProgramsPage = () => {
                   className="rounded-t-lg w-full h-48 object-cover" 
                 />
                 <div className="p-4">
-                  <h2 className="text-2xl font-bold mb-4 text-purple-600">{program.title}</h2>
+                  <h2 className="text-2xl font-bold mb-4 text-teal-600">{program.title}</h2>
                   <p className="text-gray-700">{program.details}</p>
                 </div>
               </div>
@@ -72,10 +72,10 @@ const ProgramsPage = () => {
 
           {/* Captivating Caption */}
           <div className="mt-12 text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">Our Next Programs</h2>
-            <p className="text-lg text-white mb-6">Get ready to be part of transformative initiatives that uplift our communities!</p>
+            <h2 className="text-3xl font-bold text-teal-500 mb-4">Our Next Programs</h2>
+            <p className="text-lg text-teal-500 mb-6">Get ready to be part of transformative initiatives that uplift our communities!</p>
             <Link to="/next-programs">
-              <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold py-2 px-4 rounded transition-transform duration-300 transform hover:scale-105">
+              <button className="bg-gradient-to-r from-teal-500 to-pink-500 text-white font-bold py-2 px-4 rounded transition-transform duration-300 transform hover:scale-105">
                 Learn More
               </button>
             </Link>
