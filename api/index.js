@@ -31,7 +31,7 @@ const app = express();
 // CORS configuration
 const allowedOrigins = [
   'http://localhost:5173', // Localhost
-  'https://mern-blog-5ait.onrender.com',
+  'https://wearetheworldzambia.onrender.com',
   'https://wearetheworldzambia.org', // Replace with your Render frontend URL
 ];
 
