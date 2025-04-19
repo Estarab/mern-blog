@@ -7,9 +7,9 @@ import postRoutes from './routes/post.route.js';
 import commentRoutes from './routes/comment.route.js';
 import stakeholderSignUpRoutes from './routes/StakeholderSignUp.route.js';
 import subscribeRoutes from './routes/subscribe.route.js'; // Import the subscription route
-import paymentRoutes from './routes/payment.js';
 import donationRoutes from './routes/donation.route.js'; // Import the donation route
 import volunteerRoutes from './routes/volunteer.route.js'; // Import the volunteer route
+import paymentRoutes from './routes/payment.route.js'; // Import the payment route
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
 import path from 'path';
@@ -31,7 +31,7 @@ const app = express();
 // CORS configuration
 const allowedOrigins = [
   'http://localhost:5173', // Localhost
-  'https://mern-blog-5ait.onrender.com',
+  'https://wearetheworldzambia.onrender.com',
   'https://wearetheworldzambia.org', // Replace with your Render frontend URL
 ];
 
@@ -58,7 +58,7 @@ app.use('/api/stakeholder-signup', stakeholderSignUpRoutes);
 app.use('/api/subscribe', subscribeRoutes); // Register the subscription route
 app.use('/api/donation', donationRoutes); // Register the donation route
 app.use('/api/volunteer', volunteerRoutes); // Register the volunteer route
-app.use('/api/payment', paymentRoutes);
+app.use('/api/payment', paymentRoutes); // Register the payment route
 
 app.use(express.static(path.join(__dirname, '/client/dist')));
 
@@ -82,7 +82,6 @@ app.listen(3000, () => {
 });
 
 
-
 // import express from 'express';
 // import mongoose from 'mongoose';
 // import dotenv from 'dotenv';
@@ -92,11 +91,13 @@ app.listen(3000, () => {
 // import commentRoutes from './routes/comment.route.js';
 // import stakeholderSignUpRoutes from './routes/StakeholderSignUp.route.js';
 // import subscribeRoutes from './routes/subscribe.route.js'; // Import the subscription route
-// import paymentRoutes from './routes/payment.js';
+// //import paymentRoutes from './routes/payment.js';
 // import donationRoutes from './routes/donation.route.js'; // Import the donation route
+// import volunteerRoutes from './routes/volunteer.route.js'; // Import the volunteer route
 // import cookieParser from 'cookie-parser';
 // import cors from 'cors';
 // import path from 'path';
+
 
 // dotenv.config();
 
@@ -141,7 +142,9 @@ app.listen(3000, () => {
 // app.use('/api/stakeholder-signup', stakeholderSignUpRoutes);
 // app.use('/api/subscribe', subscribeRoutes); // Register the subscription route
 // app.use('/api/donation', donationRoutes); // Register the donation route
-// app.use('/api/payment', paymentRoutes);
+// app.use('/api/volunteer', volunteerRoutes); // Register the volunteer route
+// //app.use('/api/payment', paymentRoutes);
+
 
 // app.use(express.static(path.join(__dirname, '/client/dist')));
 
@@ -163,5 +166,6 @@ app.listen(3000, () => {
 // app.listen(3000, () => {
 //   console.log('Server is running on port 3000!');
 // });
+
 
 
