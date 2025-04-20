@@ -32,7 +32,7 @@ const app = express();
 const allowedOrigins = [
   'http://localhost:5173', // Localhost
   'https://wearetheworldzambia.onrender.com',
-  'https://wearetheworldzambia.org', // Replace with your Render frontend URL
+  'https://www.wearetheworldzambia.org', // Replace with your Render frontend URL
 ];
 
 app.use(cors({
