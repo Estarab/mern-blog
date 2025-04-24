@@ -35,7 +35,7 @@ const WhatsAppPopup = () => {
             <span>WhatsApp Us!</span>
           </div>
           <Link
-            to="https://wa.me/+260978718328" // Replace with your WhatsApp number
+            to="https://wa.me/+260955522564" // Replace with your WhatsApp number
             target="_blank"
             rel="noopener noreferrer"
             className="text-white underline"
