@@ -120,7 +120,7 @@ export default function Header() {
       </div>
 
       <Navbar.Collapse className='mt-2 lg:mt-0 w-full'>
-        {['/',  '/about', '/programs', '/get-involved', '/our-leadership', '/stake-holders', '/blog',  '/contact-us', '/donate'].map((link, index) => (
+        {['/',  '/about', '/programs', '/get-involved', '/our-leadership', '/summit circle for change', '/stake-holders', '/blog',  '/contact-us', '/donate'].map((link, index) => (
           <Navbar.Link
             key={index}
             active={path === link}

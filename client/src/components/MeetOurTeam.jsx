@@ -11,6 +11,7 @@ const MeetOurTeam = () => {
     {
       name: 'Zoe Rich',
       position: 'President, Founder and Board Chair of Stakeholders',
+      read: 'Click here to Read More about Zoe Rich...',
       image: teamMember1,
     },
     {
@@ -56,6 +57,7 @@ const MeetOurTeam = () => {
                   />
                   <h3 className="text-xl font-semibold text-teal-600">{member.name}</h3>
                   <p className="text-gray-600">{member.position}</p>
+                  <p className="text-blue-600">{member.read}</p>
                 </div>
               </Link>
             ))}
