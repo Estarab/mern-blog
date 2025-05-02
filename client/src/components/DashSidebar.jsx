@@ -12,6 +12,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { signoutSuccess } from '../redux/user/userSlice';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
+// import { FaWhatsapp } from 'react-icons/fa';
 
 export default function DashSidebar() {
   const location = useLocation();
@@ -97,6 +98,14 @@ export default function DashSidebar() {
                   Comments
                 </Sidebar.Item>
               </Link>
+
+              <Sidebar.Item
+                onClick={() => window.open('https://chat.whatsapp.com/GSEN9bea8uqIXeGQ2vQyWw', '_blank')}
+                className="flex items-center text-green-500 underline gap-2 hover:bg-gray-200 cursor-pointer dark:hover:bg-gray-600 hover:text-gray-900 dark:hover:text-white transition-all transform hover:scale-105"
+              >
+                {/* <FaWhatsapp className="text-green-500 animate-pulse " /> */}
+                Join WhatsApp Group
+              </Sidebar.Item>
             </>
           )}
           <Sidebar.Item

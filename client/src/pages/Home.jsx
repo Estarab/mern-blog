@@ -14,6 +14,7 @@ import ProgramsPage from '../components/ProgramCard';
 import ImageSlider from '../components/ImageSlider';
 import RememberMeProjectTitle from '../components/RememberMeProjectTitle';
 import WhatWeDo from '../components/WhatWeDo';
+import JoinGroup from '../components/JoinGroup';
 
 
 export default function Home() {
@@ -60,6 +61,7 @@ export default function Home() {
       <WhatWeDo/>
       <GetInvolvedComp/>
       <ProgramsPage/>
+      <JoinGroup/>
       <MeetOurTeam/>
        
       

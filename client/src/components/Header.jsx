@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { signoutSuccess } from '../redux/user/userSlice';
 import { useEffect, useState } from 'react';
 import logo from '../assets/meet-our-team/logo.jpeg'; 
+import { FaWhatsapp } from 'react-icons/fa';
 
 export default function Header() {
   const path = useLocation().pathname;
@@ -94,11 +95,22 @@ export default function Header() {
                   {currentUser.email}
                 </span>
               </Dropdown.Header>
+
+              <Dropdown.Item
+  onClick={() => window.open('https://chat.whatsapp.com/GSEN9bea8uqIXeGQ2vQyWw', '_blank')}
+  className="flex items-center gap-2 hover:bg-gray-200 dark:hover:bg-gray-600 hover:text-gray-900 dark:hover:text-white transition-all transform hover:scale-105"
+>
+  <FaWhatsapp className="text-green-500 animate-pulse" />
+  Join Our WhatsApp Group
+</Dropdown.Item>
+
               <Link to={'/dashboard?tab=profile'}>
                 <Dropdown.Item className='hover:bg-gray-200 dark:hover:bg-gray-600 hover:text-gray-900 dark:hover:text-white transition-all transform hover:scale-105'>
                   Profile
                 </Dropdown.Item>
               </Link>
+           
+
               <Dropdown.Divider />
               <Dropdown.Item
                 onClick={handleSignout}

@@ -1,9 +1,15 @@
+
+
+
+
+
 import React from 'react';
 import { FaHandshake, FaUsers, FaLightbulb, FaPaperPlane } from 'react-icons/fa';
 
 const Circle4Change = () => {
   const handleJoinGroup = () => {
-    window.open('https://chat.whatsapp.com/IoS8ltss9agBfs2GNjr7WQ', '_blank'); // Replace with your actual WhatsApp group link
+    // window.open('https://chat.whatsapp.com/IoS8ltss9agBfs2GNjr7WQ', '_blank'); 
+    window.open('/sign-up'); 
   };
 
   return (
