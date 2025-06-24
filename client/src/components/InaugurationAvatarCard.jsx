@@ -9,7 +9,7 @@ import {
 import logo from '../assets/inauguration/logo.jpeg';
 import leftImg from '../assets/inauguration/logo.jpeg';
 import rightImg from '../assets/inauguration/logo.jpeg';
-import detailsBg from '../assets/inauguration/img4.jpg';
+// import detailsBg from '../assets/inauguration/img4.jpg';
 import cardBg from '../assets/inauguration/img4.jpg';
 
 const InaugurationCard = () => {
@@ -149,7 +149,7 @@ const InaugurationCard = () => {
       minWidth: 200,
       padding: 25,
       borderRadius: 10,
-      backgroundImage: `url(${detailsBg})`,
+      // backgroundImage: `url(${detailsBg})`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
@@ -176,7 +176,7 @@ const InaugurationCard = () => {
       alignItems: 'center',
       justifyContent: 'center',
       gap: 2,
-      fontSize: 12,
+      fontSize: 16,
       marginBottom: 10,
       color: '#1e3c72',
       userSelect: 'text',
@@ -255,9 +255,9 @@ const InaugurationCard = () => {
               <FaClock /> 27th June, 14hrs
             </div>
             
-            {/* <div style={styles.detailRow}>
+            <div style={styles.detailRow}>
               DM Gardens,New Kasama
-            </div> */}
+            </div>
           </div>
 
           <img src={rightImg} style={styles.decorImg} alt="right" crossOrigin="anonymous" draggable={false} />
