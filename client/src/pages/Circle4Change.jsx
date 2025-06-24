@@ -5,6 +5,7 @@
 
 import React from 'react';
 import { FaHandshake, FaUsers, FaLightbulb, FaPaperPlane } from 'react-icons/fa';
+import InaugurationCard from '../components/InaugurationAvatarCard';
 
 const Circle4Change = () => {
   const handleJoinGroup = () => {
@@ -22,6 +23,7 @@ const Circle4Change = () => {
         <p className="text-lg sm:text-xl max-w-4xl mx-auto mb-8 animate__animated animate__fadeIn animate__delay-1s">
           A vibrant community of entrepreneurs, leaders, creatives, and changemakers born out of the Zambia Business & Leadership Summit 2025.
         </p>
+        <InaugurationCard/>
         <button
           onClick={handleJoinGroup}
           className="bg-green-500 px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300 transform hover:bg-green-600 hover:scale-105 animate__animated animate__fadeIn animate__delay-2s"

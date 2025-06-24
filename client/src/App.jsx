@@ -38,6 +38,7 @@ import PaymentForm from './components/PaymentForm';
 import RememberMeProjectPage from './pages/RememberMeProjectPage';
 import VolunteerRegistration from './pages/VolunteerRegistration';
 import Circle4Change from './pages/Circle4Change';
+import InaugurationProgram from './pages/InaugurationProgram';
 
 
 
@@ -92,6 +93,7 @@ export default function App() {
 
         <Route path='/volunteer-registration' element={<VolunteerRegistration/>} />
         <Route path='/summit circle for change' element={<Circle4Change/>} />
+        <Route path='/inaguration-program' element={<InaugurationProgram/>} />
 
         
         

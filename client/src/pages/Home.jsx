@@ -15,6 +15,8 @@ import ImageSlider from '../components/ImageSlider';
 import RememberMeProjectTitle from '../components/RememberMeProjectTitle';
 import WhatWeDo from '../components/WhatWeDo';
 import JoinGroup from '../components/JoinGroup';
+// import InaugurationAvatarCard from '../components/InaugurationAvatarCard';
+
 
 
 export default function Home() {
@@ -54,7 +56,13 @@ export default function Home() {
           CLICK HERE TO KNOW MORE ABOUT US
         </Link>
       </div> */}
+      {/* <InaugurationProgram/> */}
+
+       
+
+
       <RememberMeProjectTitle/>
+      {/* <InaugurationAvatarCard /> */}
       <ImageSlider/>
       {/* <RememberMeProject/> */}
       <AboutSection />
