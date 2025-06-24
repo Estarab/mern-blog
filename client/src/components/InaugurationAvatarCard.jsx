@@ -1,25 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import html2canvas from 'html2canvas';
 import {
   FaCalendarAlt,
   FaMapMarkerAlt,
   FaClock,
-  FaUserTie,
 } from 'react-icons/fa';
 
 import logo from '../assets/inauguration/logo.jpeg';
 import leftImg from '../assets/inauguration/logo.jpeg';
 import rightImg from '../assets/inauguration/logo.jpeg';
 import detailsBg from '../assets/inauguration/img4.jpg';
-import cardBg from '../assets/inauguration/img3.jpg'; // new background for entire card
-
-
+import cardBg from '../assets/inauguration/img4.jpg';
 
 const InaugurationCard = () => {
   const [name, setName] = useState('');
   const [title, setTitle] = useState('');
   const [imgDataUrl, setImgDataUrl] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const handleUpload = (e) => {
     const file = e.target.files[0];
@@ -28,9 +34,8 @@ const InaugurationCard = () => {
       alert('Image must be less than 10MB.');
       return;
     }
-    // Optional: Warn if image might be too low res
     if (file.size < 300 * 1024) {
-      alert('Image is quite small and might appear blurry. Consider using a higher-resolution photo.');
+      alert('Image is quite small and might appear blurry.');
     }
 
     setLoading(true);
@@ -47,7 +52,7 @@ const InaugurationCard = () => {
     html2canvas(card, {
       useCORS: true,
       backgroundColor: '#ffffff',
-      scale: 2, // increase resolution
+      scale: 2,
     })
       .then((canvas) => {
         const image = canvas.toDataURL('image/jpeg', 1.0);
@@ -58,7 +63,7 @@ const InaugurationCard = () => {
       })
       .catch((err) => {
         console.error('Download failed:', err);
-        alert('Error generating the image. Check console for details.');
+        alert('Error generating the image.');
       });
   };
 
@@ -75,51 +80,39 @@ const InaugurationCard = () => {
     },
     card: {
       backgroundImage: `url(${cardBg})`,
-  backgroundSize: 'cover',
-  backgroundPosition: 'center',
-  backgroundRepeat: 'no-repeat',
-  color: '#333',
-  borderRadius: 16,
-  padding: 20,
-  width: '100%',
-  maxWidth: 600,
-  position: 'relative',
-  boxShadow: '0 4px 25px rgba(0,0,0,0.2)',
-  marginBottom: 30,
-  overflow: 'hidden',
-      
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+      color: '#333',
+      borderRadius: 16,
+      padding: 20,
+      width: '100%',
+      maxWidth: 600,
+      position: 'relative',
+      boxShadow: '0 4px 25px rgba(0,0,0,0.2)',
+      marginBottom: 30,
+      overflow: 'hidden',
     },
     logo: {
       position: 'absolute',
       top: 15,
       right: 15,
-      width: 2,
+      width: 50,
+      display: isMobile ? 'none' : 'block',
     },
-    avatarRect: { 
-  width: '35%',
-  height: 250,
-  objectFit: 'cover',
-  borderRadius: 8,
-  border: '3px solid black',
-  marginBottom: 20,
-  filter: 'brightness(1.05) contrast(1.1)',
-  imageRendering: 'auto',
-  backgroundColor: '#fff',
-  display: 'block',
-  margin: '0 auto',
-},
-
-    // avatarRect: {
-    //   width: '40%',
-    //   height: 250,
-    //   objectFit: 'cover',
-    //   borderRadius: 8,
-    //   border: '3px solid gold',
-    //   marginBottom: 20,
-    //   filter: 'brightness(1.05) contrast(1.1)',
-    //   imageRendering: 'auto',
-    //   backgroundColor: '#fff',
-    // },
+    avatarRect: {
+      width: isMobile ? '70%' : '40%',
+      height: 250,
+      objectFit: 'cover',
+      borderRadius: 8,
+      border: '3px solid black',
+      marginBottom: 20,
+      filter: 'brightness(1.05) contrast(1.1)',
+      imageRendering: 'auto',
+      backgroundColor: '#fff',
+      display: 'block',
+      margin: '0 auto',
+    },
     placeholder: {
       height: 250,
       background: '#e0e0e0',
@@ -143,25 +136,26 @@ const InaugurationCard = () => {
     },
     decorImg: {
       width: '25%',
-    //   height: 250,
       maxWidth: 120,
       borderRadius: 10,
       objectFit: 'cover',
       filter: 'brightness(0.9) saturate(1.1)',
       userSelect: 'none',
+      display: isMobile ? 'none' : 'block',
     },
     centerText: {
-      width: '50%',
-  textAlign: 'center',
-  minWidth: 200,
-  padding: 15,
-  borderRadius: 10,
-  backgroundImage: `url(${detailsBg})`,
-  backgroundSize: 'cover',
-  backgroundPosition: 'center',
-  backgroundRepeat: 'no-repeat',
-  backdropFilter: 'brightness(1.1)',
-  boxShadow: '0 0 8px rgba(0,0,0,0.2)',
+      width: isMobile ? '100%' : '50%',
+      textAlign: 'center',
+      minWidth: 200,
+      padding: 25,
+      borderRadius: 10,
+      backgroundImage: `url(${detailsBg})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+      backdropFilter: 'brightness(1.1)',
+      boxShadow: '0 0 8px rgba(0,0,0,0.2)',
+      margin: '0 auto',
     },
     name: {
       fontSize: 24,
@@ -181,8 +175,8 @@ const InaugurationCard = () => {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      gap: 8,
-      fontSize: 15,
+      gap: 2,
+      fontSize: 12,
       marginBottom: 10,
       color: '#1e3c72',
       userSelect: 'text',
@@ -255,17 +249,14 @@ const InaugurationCard = () => {
             <div style={styles.name}>{name || 'Your Name'}</div>
             <div style={styles.title}>{title || 'Your Title'}</div>
             <div style={styles.detailRow}>
-            We Are The World Zambia Inauguration and Leaders Induction/Dinner
-              {/* <FaCalendarAlt /> June 27, 2025 */}
+              We Are The World Zambia Inauguration and Leaders Induction/Dinner
             </div>
             <div style={styles.detailRow}>
               <FaClock /> 27th June, 14hrs
             </div>
-            <div style={styles.detailRow}>
-              <FaMapMarkerAlt /> DM Gardens, New Kasama
-            </div>
+            
             {/* <div style={styles.detailRow}>
-              <FaUserTie /> Dress Code: Formal
+              DM Gardens,New Kasama
             </div> */}
           </div>
 
@@ -283,15 +274,15 @@ const InaugurationCard = () => {
           spellCheck={false}
         />
         <select
-  value={title}
-  onChange={(e) => setTitle(e.target.value)}
-  style={styles.input}
->
-  <option value="">Select Title</option>
-  <option value="Guest">Guest</option>
-  <option value="VVIP">VVIP</option>
-  <option value="Official">Official</option>
-</select>
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          style={styles.input}
+        >
+          <option value="">Select Title</option>
+          <option value="Guest">Guest</option>
+          <option value="VVIP">VVIP</option>
+          <option value="Official">Official</option>
+        </select>
 
         <input
           type="file"
@@ -302,7 +293,7 @@ const InaugurationCard = () => {
         <button
           onClick={downloadCard}
           disabled={!imgDataUrl}
-          style={{ 
+          style={{
             ...styles.button,
             ...( !imgDataUrl ? styles.buttonDisabled : {} )
           }}
@@ -316,6 +307,328 @@ const InaugurationCard = () => {
 };
 
 export default InaugurationCard;
+
+
+
+
+// import React, { useState } from 'react';
+// import html2canvas from 'html2canvas';
+// import {
+//   FaCalendarAlt,
+//   FaMapMarkerAlt,
+//   FaClock,
+//   FaUserTie,
+// } from 'react-icons/fa';
+
+// import logo from '../assets/inauguration/logo.jpeg';
+// import leftImg from '../assets/inauguration/logo.jpeg';
+// import rightImg from '../assets/inauguration/logo.jpeg';
+// import detailsBg from '../assets/inauguration/img4.jpg';
+// import cardBg from '../assets/inauguration/img3.jpg'; // new background for entire card
+
+
+
+// const InaugurationCard = () => {
+//   const [name, setName] = useState('');
+//   const [title, setTitle] = useState('');
+//   const [imgDataUrl, setImgDataUrl] = useState(null);
+//   const [loading, setLoading] = useState(false);
+
+//   const handleUpload = (e) => {
+//     const file = e.target.files[0];
+//     if (!file) return;
+//     if (file.size > 10 * 1024 * 1024) {
+//       alert('Image must be less than 10MB.');
+//       return;
+//     }
+//     // Optional: Warn if image might be too low res
+//     if (file.size < 300 * 1024) {
+//       alert('Image is quite small and might appear blurry. Consider using a higher-resolution photo.');
+//     }
+
+//     setLoading(true);
+//     const reader = new FileReader();
+//     reader.onloadend = () => {
+//       setImgDataUrl(reader.result);
+//       setLoading(false);
+//     };
+//     reader.readAsDataURL(file);
+//   };
+
+//   const downloadCard = () => {
+//     const card = document.getElementById('avatar-card');
+//     html2canvas(card, {
+//       useCORS: true,
+//       backgroundColor: '#ffffff',
+//       scale: 2, // increase resolution
+//     })
+//       .then((canvas) => {
+//         const image = canvas.toDataURL('image/jpeg', 1.0);
+//         const link = document.createElement('a');
+//         link.href = image;
+//         link.download = `${name || 'avatar'}_card.jpg`;
+//         link.click();
+//       })
+//       .catch((err) => {
+//         console.error('Download failed:', err);
+//         alert('Error generating the image. Check console for details.');
+//       });
+//   };
+
+//   const styles = {
+//     container: {
+//       padding: 20,
+//       fontFamily: 'Segoe UI, sans-serif',
+//       background: 'linear-gradient(to bottom right, #1e3c72, #2a5298)',
+//       color: 'white',
+//       display: 'flex',
+//       flexDirection: 'column',
+//       alignItems: 'center',
+//       minHeight: '100vh',
+//     },
+//     card: {
+//       backgroundImage: `url(${cardBg})`,
+//   backgroundSize: 'cover',
+//   backgroundPosition: 'center',
+//   backgroundRepeat: 'no-repeat',
+//   color: '#333',
+//   borderRadius: 16,
+//   padding: 20,
+//   width: '100%',
+//   maxWidth: 600,
+//   position: 'relative',
+//   boxShadow: '0 4px 25px rgba(0,0,0,0.2)',
+//   marginBottom: 30,
+//   overflow: 'hidden',
+      
+//     },
+//     logo: {
+//       position: 'absolute',
+//       top: 15,
+//       right: 15,
+//       width: 2,
+//     },
+//     avatarRect: { 
+//   width: '35%',
+//   height: 250,
+//   objectFit: 'cover',
+//   borderRadius: 8,
+//   border: '3px solid black',
+//   marginBottom: 20,
+//   filter: 'brightness(1.05) contrast(1.1)',
+//   imageRendering: 'auto',
+//   backgroundColor: '#fff',
+//   display: 'block',
+//   margin: '0 auto',
+// },
+
+//     // avatarRect: {
+//     //   width: '40%',
+//     //   height: 250,
+//     //   objectFit: 'cover',
+//     //   borderRadius: 8,
+//     //   border: '3px solid gold',
+//     //   marginBottom: 20,
+//     //   filter: 'brightness(1.05) contrast(1.1)',
+//     //   imageRendering: 'auto',
+//     //   backgroundColor: '#fff',
+//     // },
+//     placeholder: {
+//       height: 250,
+//       background: '#e0e0e0',
+//       color: '#777',
+//       display: 'flex',
+//       justifyContent: 'center',
+//       alignItems: 'center',
+//       borderRadius: 8,
+//       marginBottom: 20,
+//       fontSize: 18,
+//       fontWeight: '600',
+//       userSelect: 'none',
+//     },
+//     flyerContent: {
+//       position: 'relative',
+//       display: 'flex',
+//       justifyContent: 'space-between',
+//       alignItems: 'flex-start',
+//       gap: 10,
+//       flexWrap: 'wrap',
+//     },
+//     decorImg: {
+//       width: '25%',
+//     //   height: 250,
+//       maxWidth: 120,
+//       borderRadius: 10,
+//       objectFit: 'cover',
+//       filter: 'brightness(0.9) saturate(1.1)',
+//       userSelect: 'none',
+//     },
+//     centerText: {
+//       width: '50%',
+//   textAlign: 'center',
+//   minWidth: 200,
+//   padding: 15,
+//   borderRadius: 10,
+//   backgroundImage: `url(${detailsBg})`,
+//   backgroundSize: 'cover',
+//   backgroundPosition: 'center',
+//   backgroundRepeat: 'no-repeat',
+//   backdropFilter: 'brightness(1.1)',
+//   boxShadow: '0 0 8px rgba(0,0,0,0.2)',
+//     },
+//     name: {
+//       fontSize: 24,
+//       fontWeight: 'bold',
+//       marginBottom: 4,
+//       color: '#1e3c72',
+//       userSelect: 'text',
+//     },
+//     title: {
+//       fontSize: 18,
+//       fontStyle: 'italic',
+//       color: '#666',
+//       marginBottom: 20,
+//       userSelect: 'text',
+//     },
+//     detailRow: {
+//       display: 'flex',
+//       alignItems: 'center',
+//       justifyContent: 'center',
+//       gap: 8,
+//       fontSize: 15,
+//       marginBottom: 10,
+//       color: '#1e3c72',
+//       userSelect: 'text',
+//     },
+//     controls: {
+//       display: 'flex',
+//       flexDirection: 'column',
+//       gap: 12,
+//       width: '100%',
+//       maxWidth: 600,
+//     },
+//     input: {
+//       padding: 10,
+//       borderRadius: 5,
+//       border: 'none',
+//       color: 'black',
+//       width: '100%',
+//       fontSize: 15,
+//     },
+//     button: {
+//       padding: 12,
+//       background: 'gold',
+//       border: 'none',
+//       color: '#1e3c72',
+//       fontWeight: 'bold',
+//       borderRadius: 5,
+//       cursor: 'pointer',
+//       fontSize: 16,
+//       transition: 'background-color 0.3s ease',
+//     },
+//     buttonDisabled: {
+//       background: '#ccc',
+//       color: '#666',
+//       cursor: 'not-allowed',
+//     },
+//     loader: {
+//       height: 250,
+//       display: 'flex',
+//       justifyContent: 'center',
+//       alignItems: 'center',
+//       color: '#007BFF',
+//       fontWeight: 'bold',
+//       fontSize: 18,
+//     },
+//   };
+
+//   return (
+//     <div style={styles.container}>
+//       <div style={styles.card} id="avatar-card">
+//         <img src={logo} alt="Logo" style={styles.logo} crossOrigin="anonymous" />
+
+//         {loading ? (
+//           <div style={styles.loader}>Uploading...</div>
+//         ) : imgDataUrl ? (
+//           <img
+//             src={imgDataUrl}
+//             alt="Uploaded"
+//             style={styles.avatarRect}
+//             crossOrigin="anonymous"
+//             draggable={false}
+//           />
+//         ) : (
+//           <div style={styles.placeholder}>Upload a photo to begin</div>
+//         )}
+
+//         <div style={styles.flyerContent}>
+//           <img src={leftImg} style={styles.decorImg} alt="left" crossOrigin="anonymous" draggable={false} />
+
+//           <div style={styles.centerText}>
+//             <div style={styles.name}>{name || 'Your Name'}</div>
+//             <div style={styles.title}>{title || 'Your Title'}</div>
+//             <div style={styles.detailRow}>
+//             We Are The World Zambia Inauguration and Leaders Induction/Dinner
+//               {/* <FaCalendarAlt /> June 27, 2025 */}
+//             </div>
+//             <div style={styles.detailRow}>
+//               <FaClock /> 27th June, 14hrs
+//             </div>
+//             <div style={styles.detailRow}>
+//               <FaMapMarkerAlt /> DM Gardens, New Kasama
+//             </div>
+//             {/* <div style={styles.detailRow}>
+//               <FaUserTie /> Dress Code: Formal
+//             </div> */}
+//           </div>
+
+//           <img src={rightImg} style={styles.decorImg} alt="right" crossOrigin="anonymous" draggable={false} />
+//         </div>
+//       </div>
+
+//       <div style={styles.controls}>
+//         <input
+//           type="text"
+//           placeholder="Enter your name"
+//           value={name}
+//           onChange={(e) => setName(e.target.value)}
+//           style={styles.input}
+//           spellCheck={false}
+//         />
+//         <select
+//   value={title}
+//   onChange={(e) => setTitle(e.target.value)}
+//   style={styles.input}
+// >
+//   <option value="">Select Title</option>
+//   <option value="Guest">Guest</option>
+//   <option value="VVIP">VVIP</option>
+//   <option value="Official">Official</option>
+// </select>
+
+//         <input
+//           type="file"
+//           accept="image/*"
+//           onChange={handleUpload}
+//           style={styles.input}
+//         />
+//         <button
+//           onClick={downloadCard}
+//           disabled={!imgDataUrl}
+//           style={{ 
+//             ...styles.button,
+//             ...( !imgDataUrl ? styles.buttonDisabled : {} )
+//           }}
+//           title={!imgDataUrl ? 'Upload an image to download' : 'Download your flyer'}
+//         >
+//           Download Card as .JPG
+//         </button>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default InaugurationCard;
 
 
 
